@@ -50,7 +50,8 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/shorten', {
+      const apiUrl = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/shorten` : '/api/shorten';
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, alias: alias || undefined })
