@@ -1,0 +1,21 @@
+{
+  "name": "shortly-project-latest",
+  "version": "1.0.0",
+  "description": "Shortly — A fast, modern URL shortener. Paste long links, get clean short ones instantly. Runs natively on your browser, free, fast and safe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thepriyanshbhatt/Shortly-URL-Shortner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thepriyanshbhatt/Shortly-URL-Shortner/issues"
+  },
+  "homepage": "https://github.com/thepriyanshbhatt/Shortly-URL-Shortner#readme"
+}
