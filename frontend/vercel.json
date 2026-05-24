@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/api/:match*",
+      "destination": "https://worker.priyanshbhatt20.workers.dev/api/:match*"
+    },
+    {
+      "source": "/([a-zA-Z0-9-_]+)",
+      "destination": "https://worker.priyanshbhatt20.workers.dev/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

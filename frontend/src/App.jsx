@@ -66,7 +66,7 @@ function App() {
       const newLink = {
         id: data.shortCode,
         originalUrl: url,
-        shortUrl: data.shortUrl,
+        shortUrl: `${window.location.origin}/${data.shortCode}`,
         createdAt: new Date().toISOString()
       };
 
@@ -100,7 +100,7 @@ function App() {
           <div className="bg-primary text-white p-2 rounded-xl dark:bg-white dark:text-black">
             <Link size={20} />
           </div>
-          <span className="font-bold text-xl tracking-tight">Shortly</span>
+          <span className="font-bold text-xl tracking-tight">TidyLink</span>
         </div>
         <div className="flex items-center gap-4">
           <button 
@@ -140,7 +140,7 @@ function App() {
           </h1>
           
           <p className="text-lg opacity-70 mb-10 leading-relaxed max-w-md text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)]">
-            Take control of your links with Shortly, the all-in-one platform designed to simplify sharing. Safe, fast, and 100% free.
+            Take control of your links with TidyLink, the all-in-one platform designed to simplify sharing. Safe, fast, and 100% free.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-16">
