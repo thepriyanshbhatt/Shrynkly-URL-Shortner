@@ -98,11 +98,11 @@ function App() {
     <div className="min-h-screen font-sans selection:bg-black/10 dark:selection:bg-white/20 bg-white text-black dark:bg-[#0a0a0a] dark:text-white relative z-0 transition-colors duration-300">
       
       {/* Header */}
-      <header className="absolute top-0 w-full z-50 px-4 py-6 border-b border-gray-100 dark:border-white/5 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-sm transition-colors duration-300">
+      <header className="sticky top-0 w-full z-50 px-4 py-4 border-b border-gray-200 dark:border-white/10 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="font-bold text-xl tracking-tight flex items-center gap-2 text-black dark:text-white">
-              <Link size={24} className="text-black dark:text-white" />
+              <img src="/logo.png" alt="Shrynkly Logo" className="w-7 h-7 object-contain" />
               Shrynkly
             </span>
           </div>
