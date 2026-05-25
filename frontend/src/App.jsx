@@ -309,7 +309,7 @@ function App() {
             <div className="bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
               All-In-One Solution
             </div>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-black dark:text-white">Powerful <span className="text-gray-400 dark:text-gray-600">Link Tools</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-black dark:text-white">Premium <span className="text-gray-400 dark:text-gray-600">Link Features</span></h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto italic">Everything you need to work with your links, completely free and 100% private.</p>
           </div>
           
@@ -458,7 +458,7 @@ function App() {
         
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <div>© 2026 Shrynkly. All rights reserved.</div>
-          <div className="flex items-center gap-2 text-gray-400">Built with ❤️ by <strong className="text-white">You</strong></div>
+          <div className="flex items-center gap-2 text-gray-400">Built with ❤️ by <strong className="text-white">Priyansh Bhatt</strong></div>
           <div className="px-3 py-1.5 rounded-full bg-[#111] dark:bg-white/5 border border-white/5 dark:border-white/10 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> Processing 100% locally
           </div>
