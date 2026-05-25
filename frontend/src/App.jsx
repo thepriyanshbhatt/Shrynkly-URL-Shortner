@@ -161,7 +161,7 @@ function App() {
           </div>
 
           {/* Shortener Box - Oval Shape */}
-          <div className="w-full max-w-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-full p-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none relative z-20">
+          <div className="w-full max-w-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-full p-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none relative z-20 transition-all duration-500 hover:shadow-xl hover:border-gray-400 dark:hover:border-white/30 focus-within:ring-4 focus-within:ring-black/5 dark:focus-within:ring-white/10 focus-within:border-black dark:focus-within:border-white">
             <form onSubmit={handleShorten} className="flex flex-col sm:flex-row gap-2">
               <input
                 id="urlInput"
@@ -304,8 +304,8 @@ function App() {
               { icon: <Layers size={20} />, title: 'Link-in-Bio', desc: 'Create a beautiful landing page.' },
               { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten thousands of links at once.' },
             ].map((tool, i) => (
-              <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-colors group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
-                <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6">
+              <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)] group cursor-pointer shadow-sm dark:shadow-none">
+                <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   {tool.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 tracking-tight text-black dark:text-white">{tool.title}</h3>
@@ -326,24 +326,24 @@ function App() {
           <p className="text-gray-400 text-lg mb-16 text-center">Built for speed, privacy, and simplicity.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16">
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-colors">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20">
+            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Zap size={20} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Lightning Fast</h3>
               <p className="text-gray-400 text-sm leading-relaxed">Process links in milliseconds with our heavily optimized edge engine.</p>
             </div>
             
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-colors">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20">
+            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Shield size={20} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">100% Secure</h3>
               <p className="text-gray-400 text-sm leading-relaxed">Your data never leaves your device. Links are processed locally.</p>
             </div>
             
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-colors">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20">
+            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Globe size={20} />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Works Anywhere</h3>
