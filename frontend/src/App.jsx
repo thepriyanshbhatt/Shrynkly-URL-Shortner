@@ -352,6 +352,98 @@ function App() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 px-4 w-full max-w-7xl mx-auto relative z-10 border-t border-black/5 dark:border-white/5">
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold text-purple-500 uppercase tracking-widest mb-3">Pricing</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Pick a plan that scales with you</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+          {/* Free Tier */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale flex flex-col h-[28rem]">
+            <h3 className="text-lg font-bold text-gray-500 uppercase tracking-widest mb-4">Free</h3>
+            <div className="flex items-end gap-1 mb-8">
+              <span className="text-5xl font-black">$0</span>
+              <span className="text-sm font-medium opacity-60 mb-2">Forever</span>
+            </div>
+            <ul className="space-y-4 mb-auto opacity-80 text-sm">
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> 50 links / mo</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Basic analytics</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Standard QR codes</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Community support</li>
+            </ul>
+            <button className="w-full py-4 mt-8 rounded-xl bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 font-bold transition-colors">Start Free</button>
+          </div>
+
+          {/* Pro Tier (Highlighted) */}
+          <div className="liquid-glass-strong rounded-[2.5rem] p-8 hover-scale relative border-purple-500/50 dark:border-purple-500/30 shadow-purple-500/20 flex flex-col h-[32rem] transform md:-translate-y-4">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">Most Popular</div>
+            <h3 className="text-lg font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-4 mt-2">Pro</h3>
+            <div className="flex items-end gap-1 mb-8">
+              <span className="text-6xl font-black">$14</span>
+              <span className="text-sm font-medium opacity-60 mb-2">per month</span>
+            </div>
+            <ul className="space-y-4 mb-auto text-sm">
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> 1,000 links / mo</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> Advanced analytics</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> 2 Custom branded domains</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> Dynamic QR codes</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> Priority support</li>
+            </ul>
+            <button className="w-full py-4 mt-8 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-colors shadow-lg">Go Pro</button>
+          </div>
+
+          {/* Enterprise Tier */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale flex flex-col h-[28rem]">
+            <h3 className="text-lg font-bold text-gray-500 uppercase tracking-widest mb-4">Enterprise</h3>
+            <div className="flex items-end gap-1 mb-8">
+              <span className="text-5xl font-black">Custom</span>
+            </div>
+            <ul className="space-y-4 mb-auto opacity-80 text-sm">
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Unlimited links</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> SSO & SAML</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Audit logs</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> 99.99% SLA</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Dedicated success manager</li>
+            </ul>
+            <button className="w-full py-4 mt-8 rounded-xl bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 font-bold transition-colors">Contact Sales</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-24 px-4 w-full max-w-6xl mx-auto relative z-10">
+        <div className="rounded-[3rem] bg-gradient-to-br from-blue-500 to-purple-600 text-white p-12 md:p-20 text-center shadow-2xl relative overflow-hidden">
+          {/* Abstract background shapes */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 relative z-10 tracking-tight">Ready to shorten your first link?</h2>
+          <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto relative z-10">Join thousands of creators and businesses who use Shrynkly to power their digital growth.</p>
+          <button className="bg-black hover:bg-gray-900 text-white font-bold rounded-full py-4 px-10 transition-transform hover:scale-105 active:scale-95 shadow-xl relative z-10">
+            Create Free Account
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full border-t border-black/5 dark:border-white/5 py-12 px-6 mt-12 relative z-10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <span className="font-bold text-2xl tracking-tight flex items-center gap-2">
+            <Link size={24} className="text-primary dark:text-white" />
+            shrynkly.
+          </span>
+          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium opacity-60">
+            <a href="#" className="hover:opacity-100 transition-opacity">Privacy</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Terms</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">API Docs</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Contact</a>
+          </div>
+          <p className="text-sm opacity-40">© 2026 SHRYNKLY SYSTEMS INC.</p>
+        </div>
+      </footer>
+
       {/* History Side Panel Overlay */}
       <AnimatePresence>
         {showHistory && (
