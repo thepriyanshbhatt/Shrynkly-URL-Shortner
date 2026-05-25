@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Link, ArrowRight, Check, Copy, QrCode, ShieldCheck, Zap, History, Trash2, Scissors } from 'lucide-react';
+import { Moon, Sun, Link, ArrowRight, Check, Copy, QrCode, ShieldCheck, Zap, History, Trash2, Scissors, BarChart3, Globe, Code, Layers, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLinkStore } from './stores/useLinkStore';
 
@@ -243,6 +243,114 @@ function App() {
           </motion.div>
         </motion.div>
       </main>
+
+      {/* Features Section */}
+      <section id="features" className="py-24 px-4 w-full max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Everything you need to <span className="text-gradient">succeed.</span></h2>
+          <p className="text-lg opacity-70 max-w-2xl mx-auto">Powerful features to help you track, brand, and optimize every single click.</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center mb-6">
+              <BarChart3 size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Deep Analytics</h3>
+            <p className="opacity-70 text-sm leading-relaxed">Get granular data on who clicks your links, where they come from, and which devices they use.</p>
+            <div className="mt-8 h-32 w-full rounded-xl bg-gradient-to-t from-purple-500/20 to-transparent border-b-2 border-purple-500/50 relative overflow-hidden flex items-end justify-between px-4 pb-2">
+               <div className="w-4 h-12 bg-purple-500/80 rounded-t-sm"></div>
+               <div className="w-4 h-24 bg-blue-500/80 rounded-t-sm"></div>
+               <div className="w-4 h-16 bg-cyan-500/80 rounded-t-sm"></div>
+               <div className="w-4 h-20 bg-purple-400/80 rounded-t-sm"></div>
+               <div className="w-4 h-28 bg-blue-400/80 rounded-t-sm"></div>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6">
+              <Globe size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Branded Domains</h3>
+            <p className="opacity-70 text-sm leading-relaxed">Replace shrynk.ly with your own domain to build trust and increase your click-through rate by up to 34%.</p>
+            <div className="mt-8 py-3 px-4 rounded-xl bg-black/10 dark:bg-black/40 border border-white/5 font-mono text-xs text-blue-400 text-center">
+               go.yourbrand.com/summer-sale
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center mb-6">
+              <QrCode size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Dynamic QR Codes</h3>
+            <p className="opacity-70 text-sm leading-relaxed">Generate beautiful, customizable QR codes for every link that you can update even after printing.</p>
+            <div className="mt-8 flex justify-center opacity-80">
+               <QrCode size={80} strokeWidth={1} />
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center mb-6">
+              <Code size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Developer API</h3>
+            <p className="opacity-70 text-sm leading-relaxed">Shorten links programmatically with a clean REST API, webhooks, and SDKs for every major language.</p>
+          </div>
+
+          {/* Card 5 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center mb-6">
+              <Layers size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Link-in-Bio</h3>
+            <p className="opacity-70 text-sm leading-relaxed">Spin up a polished landing page in seconds. One link to host every link your audience needs.</p>
+          </div>
+
+          {/* Card 6 */}
+          <div className="liquid-glass rounded-[2rem] p-8 hover-scale">
+            <div className="w-12 h-12 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center mb-6">
+              <Shield size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Enterprise Security</h3>
+            <p className="opacity-70 text-sm leading-relaxed">SOC 2 compliant, SSO, audit logs, and link-level password protection — built for serious teams.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works Section */}
+      <section className="py-24 px-4 w-full max-w-5xl mx-auto relative z-10 border-t border-black/5 dark:border-white/5">
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-3">How it works</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Three steps. Zero friction.</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {/* Connector Line */}
+          <div className="hidden md:block absolute top-[60px] left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent -z-10"></div>
+          
+          <div className="liquid-glass rounded-[2rem] p-8 relative hover-scale text-center md:text-left">
+             <div className="text-4xl font-black text-purple-500 mb-6 font-mono opacity-80">01</div>
+             <h3 className="text-2xl font-bold mb-3">Paste</h3>
+             <p className="opacity-70 text-sm">Drop in any URL — long, ugly, or full of UTM params. We don't judge.</p>
+          </div>
+          
+          <div className="liquid-glass rounded-[2rem] p-8 relative hover-scale text-center md:text-left">
+             <div className="text-4xl font-black text-blue-500 mb-6 font-mono opacity-80">02</div>
+             <h3 className="text-2xl font-bold mb-3">Shrynk</h3>
+             <p className="opacity-70 text-sm">Get a clean, branded link in milliseconds, ready to share anywhere.</p>
+          </div>
+
+          <div className="liquid-glass rounded-[2rem] p-8 relative hover-scale text-center md:text-left">
+             <div className="text-4xl font-black text-cyan-500 mb-6 font-mono opacity-80">03</div>
+             <h3 className="text-2xl font-bold mb-3">Track</h3>
+             <p className="opacity-70 text-sm">Watch clicks roll in across geos, devices, and referrers in real-time.</p>
+          </div>
+        </div>
+      </section>
 
       {/* History Side Panel Overlay */}
       <AnimatePresence>
