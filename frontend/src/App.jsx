@@ -148,11 +148,11 @@ function App() {
             100% Free & Privacy First
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1] text-black dark:text-white max-w-5xl text-balance mx-auto">
+          <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-black dark:text-white max-w-5xl text-balance mx-auto">
             Long URLs were a mistake. <span className="whitespace-nowrap"><strong>Shrynk</strong> fixes that.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             URLs got out of hand. Shrynk puts them back in their place - shorter, smarter, and fully under your control. Your browser does the work. Your data stays yours.
           </p>
 
