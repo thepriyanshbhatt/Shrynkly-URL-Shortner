@@ -92,7 +92,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen font-sans selection:bg-purple-500/30 transition-colors duration-500 bg-background-light text-slate-900 dark:bg-background-dark dark:text-white relative z-0">
+    <div className="min-h-screen font-sans selection:bg-purple-500/30 transition-colors duration-500 bg-[#f8fafc] text-slate-900 dark:bg-[#070b14] dark:text-white relative z-0">
       <div className="grid-overlay opacity-30 dark:opacity-10" />
       
       {/* Header */}

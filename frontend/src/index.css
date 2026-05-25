@@ -50,11 +50,11 @@
   }
 
   .liquid-glass {
-    @apply backdrop-blur-[16px] bg-white/40 dark:bg-[#13171f]/60 border border-white/20 dark:border-white/10 shadow-lg;
+    @apply backdrop-blur-[16px] bg-white/40 dark:bg-[#0a0f1c]/50 border border-white/20 dark:border-white/10 shadow-lg;
   }
   
   .liquid-glass-strong {
-    @apply backdrop-blur-[24px] bg-white/60 dark:bg-[#1a202c]/70 border border-white/30 dark:border-white/10 shadow-xl;
+    @apply backdrop-blur-[24px] bg-white/60 dark:bg-[#0c1222]/60 border border-white/30 dark:border-white/10 shadow-xl;
   }
 
   .hover-scale {
