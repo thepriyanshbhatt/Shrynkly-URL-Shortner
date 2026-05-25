@@ -148,12 +148,12 @@ function App() {
             100% Free & Privacy First
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-[1.05] text-black dark:text-white">
-            Every Link Tool<br/>You'll Ever Need
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1] text-black dark:text-white max-w-4xl">
+            Links that work as hard as you do.<br/>Long URLs were a mistake. <strong>Shrynk</strong> fixes that.
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Shorten, track, and optimize — do everything with your links. All processing happens securely in your browser. Your data never leaves your control.
+            URLs got out of hand. Shrynk puts them back in their place - shorter, smarter, and fully under your control. Your browser does the work. Your data stays yours.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full">
