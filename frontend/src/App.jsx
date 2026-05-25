@@ -394,6 +394,7 @@ function App() {
             </div>
             <ul className="space-y-4 mb-auto opacity-80 text-sm">
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> 50 links / mo</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Links expire in 7 days</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Basic analytics</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Standard QR codes</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Community support</li>
@@ -411,6 +412,7 @@ function App() {
             </div>
             <ul className="space-y-4 mb-auto text-sm">
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> 1,000 links / mo</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> 1 month link expiration</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> Advanced analytics</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> 2 Custom branded domains</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div> Dynamic QR codes</li>
@@ -427,6 +429,7 @@ function App() {
             </div>
             <ul className="space-y-4 mb-auto opacity-80 text-sm">
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Unlimited links</li>
+              <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Custom link duration</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> SSO & SAML</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Audit logs</li>
               <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div> 99.99% SLA</li>

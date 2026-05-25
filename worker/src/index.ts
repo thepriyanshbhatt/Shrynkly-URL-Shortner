@@ -65,8 +65,8 @@ export default {
 					}
 				}
 
-				// Store in KV
-				await env.LINKS.put(shortCode as string, parsedUrl.toString());
+				// Store in KV with a 7-day expiration (604800 seconds) by default for free tier
+				await env.LINKS.put(shortCode as string, parsedUrl.toString(), { expirationTtl: 604800 });
 
 				return new Response(JSON.stringify({ shortCode, shortUrl: `${url.origin}/${shortCode}` }), {
 					headers: { 'Content-Type': 'application/json', ...corsHeaders },
