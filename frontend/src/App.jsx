@@ -158,9 +158,9 @@ function App() {
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className="w-full max-w-3xl z-20 relative"
+            className="w-full max-w-2xl z-20 relative"
           >
-            <div className="liquid-glass rounded-[2rem] p-2 w-full relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div className="liquid-glass rounded-full p-2 w-full relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
               <form onSubmit={handleShorten} className="flex flex-col sm:flex-row gap-2">
                 <input
                   id="urlInput"
@@ -173,7 +173,7 @@ function App() {
                 <button 
                   type="submit"
                   disabled={loading}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-[1.5rem] py-4 px-8 sm:px-10 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 flex items-center justify-center min-w-[140px]"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full py-4 px-8 sm:px-10 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 flex items-center justify-center min-w-[140px]"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
