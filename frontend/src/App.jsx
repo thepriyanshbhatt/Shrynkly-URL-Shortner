@@ -142,11 +142,6 @@ function App() {
         
         {/* Hero Section */}
         <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
-          
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-bold uppercase tracking-wide mb-8 text-gray-800 dark:text-gray-200">
-            <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            100% Free & Privacy First
-          </div>
 
           <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-black dark:text-white max-w-5xl text-balance mx-auto">
             Long URLs were a mistake. <span className="whitespace-nowrap"><strong>Shrynkly</strong> fixes that.</span>
