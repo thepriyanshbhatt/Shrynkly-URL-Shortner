@@ -148,8 +148,8 @@ function App() {
             100% Free & Privacy First
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1] text-black dark:text-white max-w-4xl">
-            Long URLs were a mistake.<br/><strong>Shrynk</strong> fixes that.
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.1] text-black dark:text-white max-w-5xl text-balance mx-auto">
+            Long URLs were a mistake. <strong>Shrynk</strong> fixes that.
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
