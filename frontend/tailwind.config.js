@@ -10,7 +10,7 @@ export default {
       colors: {
         background: {
           light: '#f8fafc',
-          dark: '#0a0e1a'
+          dark: '#080911'
         },
         surface: {
           light: '#ffffff',
@@ -19,7 +19,7 @@ export default {
         primary: '#2563EB',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'],
       }
     },
   },
