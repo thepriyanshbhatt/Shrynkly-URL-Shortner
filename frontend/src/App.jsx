@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, Globe, Layers, Shield, Clock, SplitSquareHorizontal, Minimize, Lock, ServerOff, CheckCircle2, ArrowUpRight, Star } from 'lucide-react';
+import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, Globe, Layers, Shield, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
@@ -278,9 +278,9 @@ function App() {
               { icon: <Globe size={20} />, title: 'Branded Domains', desc: 'Connect your own domain to build trust.' },
               { icon: <QrCode size={20} />, title: 'Dynamic QR', desc: 'Create editable QR codes instantly.' },
               { icon: <BarChart3 size={20} />, title: 'Deep Analytics', desc: 'Track clicks, locations, and referrers.' },
-              { icon: <SplitSquareHorizontal size={20} />, title: 'A/B Testing', desc: 'Split traffic between multiple links.' },
+              { icon: <Scissors size={20} />, title: 'A/B Testing', desc: 'Split traffic between multiple links.' },
               { icon: <Layers size={20} />, title: 'Link-in-Bio', desc: 'Create a beautiful landing page.' },
-              { icon: <Minimize size={20} />, title: 'Bulk Shorten', desc: 'Shorten thousands of links at once.' },
+              { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten thousands of links at once.' },
             ].map((tool, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-[1.5rem] p-8 hover:border-gray-300 transition-colors group cursor-pointer shadow-sm hover:shadow-md">
                 <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-black mb-6">
@@ -330,10 +330,10 @@ function App() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500"/> No signup required</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500"/> Works offline</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500"/> No limits</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500"/> Forever free</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No signup required</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Works offline</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No limits</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Forever free</span>
           </div>
         </div>
       </section>
@@ -353,12 +353,8 @@ function App() {
       </section>
 
       <div className="w-full bg-white py-8 text-center border-b border-gray-100 flex flex-col md:flex-row items-center justify-center gap-4">
-        <div className="flex gap-1 text-black">
-          <Star size={18} fill="currentColor" />
-          <Star size={18} fill="currentColor" />
-          <Star size={18} fill="currentColor" />
-          <Star size={18} fill="currentColor" />
-          <Star size={18} fill="currentColor" />
+        <div className="flex gap-1 text-black text-xl">
+          ★★★★★
         </div>
         <span className="text-gray-500 text-sm font-medium">Loved by <strong>10,000+</strong> users worldwide</span>
       </div>
