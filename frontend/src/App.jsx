@@ -281,7 +281,7 @@ function App() {
             <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Never leaves your device</p>
           </div>
           <div className="flex flex-col items-center px-4">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">Quick, safe.</h3>
+            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">Quick, Safe.</h3>
             <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">built for speed and security</p>
           </div>
           <div className="flex flex-col items-center px-4">
