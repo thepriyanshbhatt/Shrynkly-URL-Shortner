@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Link, ArrowRight, Check, Copy, QrCode, ShieldCheck, Zap, History, Trash2, Scissors, BarChart3, Globe, Code, Layers, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
 
 function App() {
@@ -29,11 +30,13 @@ function App() {
 
   const { links, addLink, removeLink, clearLinks } = useLinkStore();
   const [copiedId, setCopiedId] = useState(null);
+  const [showQR, setShowQR] = useState(false);
 
   const handleShorten = async (e) => {
     e.preventDefault();
     setError('');
     setCurrentResult(null);
+    setShowQR(false);
 
     if (!url) {
       setError('Please enter a URL');
@@ -226,11 +229,33 @@ function App() {
                       >
                         {copiedId === 'current' ? <Check size={18}/> : <Copy size={18}/>}
                       </button>
-                      <button className="flex items-center justify-center gap-2 p-3 rounded-xl bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 transition-all" title="QR Code">
+                      <button 
+                        onClick={() => setShowQR(!showQR)}
+                        className={`flex items-center justify-center gap-2 p-3 rounded-xl transition-all ${
+                          showQR ? 'bg-blue-500/10 text-blue-500' : 'bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20'
+                        }`} 
+                        title="Toggle QR Code"
+                      >
                         <QrCode size={18} />
                       </button>
                     </div>
                   </div>
+                  
+                  {/* QR Code Expansion */}
+                  <AnimatePresence>
+                    {showQR && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                        animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
+                        exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                        className="overflow-hidden flex justify-center border-t border-black/5 dark:border-white/5"
+                      >
+                        <div className="p-4 bg-white rounded-xl shadow-inner mt-4">
+                          <QRCodeSVG value={currentResult.shortUrl} size={150} />
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.div>
               )}
             </AnimatePresence>
