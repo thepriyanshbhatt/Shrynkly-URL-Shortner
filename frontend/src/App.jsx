@@ -276,21 +276,21 @@ function App() {
         className="w-full border-y border-gray-100 dark:border-white/5 py-16 bg-white dark:bg-[#0a0a0a] relative z-10 transition-colors duration-300"
       >
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 text-center divide-x-0 md:divide-x divide-gray-100 dark:divide-white/5">
-          <div className="flex flex-col items-center px-4">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">Private</h3>
-            <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Never leaves your device</p>
+          <div className="flex flex-col items-center px-2 h-full">
+            <h3 className="text-xl md:text-2xl font-black tracking-tight mb-3 text-black dark:text-white">Private</h3>
+            <p className="mt-auto text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Never leaves your device</p>
           </div>
-          <div className="flex flex-col items-center px-4">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">Quick. Clean. Safe.</h3>
-            <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">built for speed and security</p>
+          <div className="flex flex-col items-center px-2 h-full">
+            <h3 className="text-xl md:text-2xl font-black tracking-tight mb-3 text-black dark:text-white text-balance">Quick. Clean. Safe.</h3>
+            <p className="mt-auto text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">built for speed and security</p>
           </div>
-          <div className="flex flex-col items-center px-4">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">None</h3>
-            <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Data stored</p>
+          <div className="flex flex-col items-center px-2 h-full">
+            <h3 className="text-xl md:text-2xl font-black tracking-tight mb-3 text-black dark:text-white">None</h3>
+            <p className="mt-auto text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Data stored</p>
           </div>
-          <div className="flex flex-col items-center px-4">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 text-black dark:text-white">Start free</h3>
-            <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Upgrade when you are ready</p>
+          <div className="flex flex-col items-center px-2 h-full">
+            <h3 className="text-xl md:text-2xl font-black tracking-tight mb-3 text-black dark:text-white">Start free</h3>
+            <p className="mt-auto text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-relaxed">Upgrade when you are ready</p>
           </div>
         </div>
       </motion.section>
