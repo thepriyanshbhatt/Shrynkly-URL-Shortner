@@ -101,8 +101,8 @@ function App() {
       <header className="sticky top-0 w-full z-50 px-4 py-4 border-b border-gray-200 dark:border-white/10 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl tracking-tight flex items-center gap-2 text-black dark:text-white">
-              <img src="/logo.png" alt="Shrynkly Logo" className="w-7 h-7 object-contain" />
+            <span className="font-bold text-2xl tracking-tight flex items-center gap-2 text-black dark:text-white">
+              <img src="/logo.png" alt="Shrynkly Logo" className="w-10 h-10 object-contain" />
               Shrynkly
             </span>
           </div>
