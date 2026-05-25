@@ -132,7 +132,7 @@ function App() {
       </header>
 
       {/* Main Content with Grid Overlay */}
-      <div className="relative w-full pt-32 md:pt-48 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center">
+      <div className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center">
         <div className="grid-overlay" />
         
         {/* Hero Section */}
