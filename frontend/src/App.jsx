@@ -132,7 +132,12 @@ function App() {
       </header>
 
       {/* Main Content with Grid Overlay */}
-      <div className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center"
+      >
         <div className="grid-overlay" />
         
         {/* Hero Section */}
@@ -260,10 +265,16 @@ function App() {
             )}
           </AnimatePresence>
         </section>
-      </div>
+      </motion.div>
 
       {/* Stats Banner */}
-      <section className="w-full border-y border-gray-100 dark:border-white/5 py-16 bg-white dark:bg-[#0a0a0a] relative z-10 transition-colors duration-300">
+      <motion.section 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full border-y border-gray-100 dark:border-white/5 py-16 bg-white dark:bg-[#0a0a0a] relative z-10 transition-colors duration-300"
+      >
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 text-center divide-x-0 md:divide-x divide-gray-100 dark:divide-white/5">
           <div className="flex flex-col items-center">
             <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-2 text-black dark:text-white">Secure</h3>
@@ -282,10 +293,17 @@ function App() {
             <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em]">Accessibility</p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Tools Grid */}
-      <section id="tools" className="w-full bg-[#fcfcfc] dark:bg-[#0f0f0f] py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 transition-colors duration-300">
+      <motion.section 
+        id="tools" 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full bg-[#fcfcfc] dark:bg-[#0f0f0f] py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 transition-colors duration-300"
+      >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 flex flex-col items-center">
             <div className="bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
@@ -317,10 +335,17 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Why Shrynkly (Black Section) */}
-      <section id="why" className="w-full bg-black dark:bg-[#050505] text-white py-32 px-4 relative z-10 border-b border-transparent dark:border-white/5 transition-colors duration-300">
+      <motion.section 
+        id="why" 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full bg-black dark:bg-[#050505] text-white py-32 px-4 relative z-10 border-b border-transparent dark:border-white/5 transition-colors duration-300"
+      >
         <div className="max-w-6xl mx-auto flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-center">Why Shrynkly?</h2>
           <p className="text-gray-400 text-lg mb-16 text-center">Built for speed, privacy, and simplicity.</p>
@@ -358,10 +383,17 @@ function App() {
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Forever free</span>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA / Request Tool */}
-      <section id="request" className="w-full bg-white dark:bg-[#0a0a0a] py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 overflow-hidden transition-colors duration-300">
+      <motion.section 
+        id="request" 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="w-full bg-white dark:bg-[#0a0a0a] py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 overflow-hidden transition-colors duration-300"
+      >
         <div className="grid-overlay opacity-50 dark:opacity-20" />
         <div className="max-w-3xl mx-auto bg-white/50 dark:bg-[#111]/80 backdrop-blur-3xl border border-gray-100 dark:border-white/10 rounded-[3rem] p-12 md:p-20 text-center relative z-20 shadow-2xl dark:shadow-none">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-black dark:text-white">Need a specific tool?</h2>
@@ -372,7 +404,7 @@ function App() {
             Request a Tool <ArrowRight size={16} />
           </button>
         </div>
-      </section>
+      </motion.section>
 
       <div className="w-full bg-white dark:bg-[#0a0a0a] py-8 text-center border-b border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-center gap-4 transition-colors duration-300">
         <div className="flex gap-1 text-black dark:text-white text-xl">
