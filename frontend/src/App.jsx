@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Link, ArrowRight, Check, Copy, QrCode, ShieldCheck, Zap, History, Trash2, Scissors, BarChart3, Globe, Code, Layers, Shield } from 'lucide-react';
+import { Moon, Sun, Link, ArrowRight, Check, Copy, QrCode, ShieldCheck, Zap, History, Trash2, Scissors, BarChart3, Globe, Code, Layers, Shield, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
@@ -216,6 +216,10 @@ function App() {
                       <p className="text-xs text-gray-500 truncate mt-1">
                         {currentResult.originalUrl}
                       </p>
+                      <div className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-orange-500/10 text-orange-600 dark:text-orange-400 text-[10px] sm:text-xs font-semibold border border-orange-500/20">
+                        <Clock size={12} />
+                        <span>Expires in 7 days ({new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })})</span>
+                      </div>
                     </div>
                     <div className="flex gap-2">
                       <button
