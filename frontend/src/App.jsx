@@ -5,6 +5,7 @@ import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
 import { Routes, Route, useLocation, Link as RouterLink } from 'react-router-dom';
 import FAQ from './pages/FAQ';
+import Pricing from './pages/Pricing';
 
 function App() {
   const location = useLocation();
@@ -112,7 +113,7 @@ function App() {
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
             <a href="/#tools" className="hover:text-black dark:hover:text-white transition-colors">All Tools</a>
             <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
-            <a href="/#pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</a>
+            <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
             <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors font-bold text-blue-600 dark:text-blue-400">FAQ</RouterLink>
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
@@ -394,105 +395,7 @@ function App() {
         </div>
       </motion.section>
 
-      {/* Pricing Section */}
-      <motion.section 
-        id="pricing" 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="w-full bg-[#fafafa] dark:bg-[#050505] py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 transition-colors duration-300"
-      >
-        <div className="max-w-6xl mx-auto flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-24 text-black dark:text-white text-center">Pick a plan that scales with you</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto items-center">
-            {/* Free Tier */}
-            <div className="bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-sm dark:shadow-none hover:border-gray-300 dark:hover:border-white/20 transition-colors">
-              <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Free</h3>
-              <div className="flex items-end gap-2 mb-8">
-                <span className="text-5xl font-black text-black dark:text-white">$0</span>
-                <span className="text-sm font-medium text-gray-500 mb-1">Forever</span>
-              </div>
-              <ul className="flex flex-col gap-4 mb-10 flex-1">
-                {[
-                  '50 links / mo',
-                  'Links expire in 7 days',
-                  'Basic analytics',
-                  'Standard QR codes',
-                  'Community support'
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className="w-full py-3 px-4 rounded-xl font-bold bg-gray-50 hover:bg-gray-100 dark:bg-white/5 dark:hover:bg-white/10 text-black dark:text-white border border-gray-200 dark:border-white/10 transition-colors">
-                Start Free
-              </button>
-            </div>
-
-            {/* Pro Tier */}
-            <div className="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-2xl dark:shadow-[0_0_40px_rgba(255,255,255,0.03)] relative transform md:scale-105 z-10">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap">
-                Most Popular
-              </div>
-              <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 mt-2">Pro</h3>
-              <div className="flex items-end gap-2 mb-8">
-                <span className="text-5xl font-black text-black dark:text-white">$14</span>
-                <span className="text-sm font-medium text-gray-500 mb-1">per month</span>
-              </div>
-              <ul className="flex flex-col gap-4 mb-10 flex-1">
-                {[
-                  '1,000 links / mo',
-                  '1 month link expiration',
-                  'Advanced analytics',
-                  '2 Custom branded domains',
-                  'Dynamic QR codes',
-                  'Priority support'
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className="w-full py-3 px-4 rounded-xl font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 transition-colors">
-                Go Pro
-              </button>
-            </div>
-
-            {/* Enterprise Tier */}
-            <div className="bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-sm dark:shadow-none hover:border-gray-300 dark:hover:border-white/20 transition-colors">
-              <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Enterprise</h3>
-              <div className="flex items-end gap-2 mb-8">
-                <span className="text-5xl font-black text-black dark:text-white">Custom</span>
-              </div>
-              <ul className="flex flex-col gap-4 mb-10 flex-1">
-                {[
-                  'Unlimited links',
-                  'Custom link duration',
-                  'SSO & SAML',
-                  'Audit logs',
-                  '99.99% SLA',
-                  'Dedicated success manager'
-                ].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className="w-full py-3 px-4 rounded-xl font-bold bg-gray-50 hover:bg-gray-100 dark:bg-white/5 dark:hover:bg-white/10 text-black dark:text-white border border-gray-200 dark:border-white/10 transition-colors">
-                Contact Sales
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </motion.section>
-
+      {/* Reviews Banner */}
       <div className="w-full bg-white dark:bg-[#0a0a0a] py-8 text-center border-b border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-center gap-4 transition-colors duration-300">
         <div className="flex gap-1 text-black dark:text-white text-xl">
           ★★★★★
@@ -502,6 +405,7 @@ function App() {
             </motion.main>
           } />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </AnimatePresence>
 
@@ -523,7 +427,7 @@ function App() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
               <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><RouterLink to="/pricing" className="hover:text-white transition-colors">Pricing</RouterLink></li>
             </ul>
           </div>
           
