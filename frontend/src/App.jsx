@@ -231,7 +231,7 @@ function App() {
                     </p>
                     <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 text-xs font-semibold">
                       <Clock size={12} />
-                      <span>Expires in 7 days ({new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })})</span>
+                      <span>Expires in 3 days ({new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })})</span>
                     </div>
                   </div>
                   <div className="flex gap-2 w-full sm:w-auto">
