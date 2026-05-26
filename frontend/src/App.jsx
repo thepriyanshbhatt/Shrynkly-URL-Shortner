@@ -106,7 +106,7 @@ function App() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="font-bold text-2xl tracking-tight flex items-center gap-2 text-black dark:text-white">
-              <img src="/logo.png" alt="Shrynkly Logo" className="w-10 h-10 object-contain rounded-lg" />
+              <img src="/logo.png" alt="Shrynkly Logo" className="w-10 h-10 object-contain" />
               Shrynkly
             </span>
           </div>
@@ -407,7 +407,7 @@ function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1">
             <span className="font-bold text-2xl tracking-tight flex items-center gap-2 mb-4 text-white">
-              <img src="/logo.png" alt="Shrynkly Logo" className="w-8 h-8 object-contain rounded-lg" />
+              <img src="/logo.png" alt="Shrynkly Logo" className="w-8 h-8 object-contain" />
               Shrynkly
             </span>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
