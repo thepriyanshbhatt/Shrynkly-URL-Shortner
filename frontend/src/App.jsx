@@ -111,7 +111,6 @@ function App() {
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
-            <a href="/#features" className="hover:text-black dark:hover:text-white transition-colors">All Features</a>
             <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
             <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
             <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
@@ -194,7 +193,7 @@ function App() {
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white dark:border-black/30 dark:border-t-black rounded-full animate-spin" />
                 ) : (
-                  "Shrynkly It"
+                  "Shrynk it"
                 )}
               </button>
             </form>
@@ -323,14 +322,12 @@ function App() {
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto italic">Everything you need to work with your links, completely free and 100% private.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {[
               { icon: <Globe size={20} />, title: 'Branded Domains', desc: 'Connect your own domain to build trust.' },
-              { icon: <QrCode size={20} />, title: 'Dynamic QR', desc: 'Create editable QR codes instantly.' },
+              { icon: <QrCode size={20} />, title: 'QR Code', desc: 'Create editable QR codes instantly.' },
               { icon: <History size={20} />, title: 'Deep Analytics', desc: 'Track clicks, locations, and referrers.' },
-              { icon: <Scissors size={20} />, title: 'A/B Testing', desc: 'Split traffic between multiple links.' },
-              { icon: <Layers size={20} />, title: 'Link-in-Bio', desc: 'Create a beautiful landing page.' },
-              { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten thousands of links at once.' },
+              { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten multiple links at once.' },
             ].map((feature, i) => (
               <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)] group cursor-pointer shadow-sm dark:shadow-none">
                 <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
