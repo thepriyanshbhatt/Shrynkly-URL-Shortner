@@ -388,20 +388,14 @@ function App() {
           
           <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No signup required</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Works offline</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No limits</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Instant generation</span>
+            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Privacy guaranteed</span>
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Forever free</span>
           </div>
         </div>
       </motion.section>
 
-      {/* Reviews Banner */}
-      <div className="w-full bg-white dark:bg-[#0a0a0a] py-8 text-center border-b border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-center gap-4 transition-colors duration-300">
-        <div className="flex gap-1 text-black dark:text-white text-xl">
-          ★★★★★
-        </div>
-        <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Loved by <strong className="text-black dark:text-white">10,000+</strong> users worldwide</span>
-      </div>
+
             </motion.main>
           } />
           <Route path="/faq" element={<FAQ />} />
