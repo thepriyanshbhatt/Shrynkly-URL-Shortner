@@ -16,8 +16,16 @@ const faqCategories = [
         answer: "Yes! Our core URL shortening features are completely free to use. We don't require an account or credit card for basic usage. We also offer Premium and Enterprise tiers for users who need advanced features like custom domains and analytics."
       },
       {
+        question: "Do I need to create an account?",
+        answer: "No, you can start shortening links instantly without signing up. However, creating a free account lets you view your link history, access basic analytics, and manage your links across devices."
+      },
+      {
         question: "How long do the links last?",
         answer: "By default, free links expire in 7 days to keep our system fast and clean. If you need links that last forever, you can upgrade to our Pro or Enterprise plans."
+      },
+      {
+        question: "How many links can I shorten?",
+        answer: "Free users can shorten up to 50 links per month. If you need more capacity, our Pro plan allows up to 1,000 links per month, and our Enterprise plan offers unlimited shortening."
       }
     ]
   },
@@ -32,6 +40,14 @@ const faqCategories = [
       {
         question: "Is it safe to click a Shrynkly link?",
         answer: "Yes. Every URL is thoroughly scanned using multiple threat-detection databases to ensure it doesn't lead to malware or phishing sites."
+      },
+      {
+        question: "Can anyone see the analytics for my shortened links?",
+        answer: "No, your link analytics (like click counts and locations) are completely private and only accessible to you from your personal dashboard."
+      },
+      {
+        question: "What happens to my data if I delete my account?",
+        answer: "We adhere strictly to data minimization principles. If you choose to delete your account, all associated links, history, and analytics data are permanently removed from our servers."
       }
     ]
   },
@@ -41,11 +57,19 @@ const faqCategories = [
     items: [
       {
         question: "Why is my link not working?",
-        answer: "If a link isn't working, it may have expired (free links expire after 7 days) or the destination URL may no longer exist. Try generating a new link."
+        answer: "If a link isn't working, it may have expired (free links expire after 7 days) or the original destination URL may no longer exist. Try generating a new link."
+      },
+      {
+        question: "I lost my short link, can I retrieve it?",
+        answer: "If you shortened the link while logged in, you can easily find it in your dashboard history. If you were using the tool as a guest and cleared your browser cache, the link cannot be retrieved."
       },
       {
         question: "How do I edit a dynamic QR code?",
         answer: "Dynamic QR codes are available on the Pro and Enterprise plans. You can edit the destination URL from your dashboard without having to generate or print a new QR code."
+      },
+      {
+        question: "Why does my custom branded domain say 'Pending'?",
+        answer: "DNS propagation can take anywhere from a few minutes to 24 hours. If it's still pending after 24 hours, double-check that your DNS records exactly match the ones provided in your dashboard settings."
       }
     ]
   }
