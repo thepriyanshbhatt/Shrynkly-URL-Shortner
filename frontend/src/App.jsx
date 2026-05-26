@@ -385,7 +385,7 @@ function App() {
               <p className="text-gray-400 text-sm leading-relaxed">Use on any device, any browser, completely responsive.</p>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium w-full pt-16 border-t border-white/10">
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No signup required</span>
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Instant generation</span>
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Privacy guaranteed</span>
@@ -448,9 +448,6 @@ function App() {
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <div>© 2026 Shrynkly. All rights reserved.</div>
           <div className="flex items-center gap-2 text-gray-400">Built with ❤️ by <strong className="text-white">Priyansh Bhatt</strong></div>
-          <div className="px-3 py-1.5 rounded-full bg-[#111] dark:bg-white/5 border border-white/5 dark:border-white/10 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> Processing 100% locally
-          </div>
         </div>
       </footer>
 
