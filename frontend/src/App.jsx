@@ -385,8 +385,7 @@ function App() {
               <p className="text-gray-400 text-sm leading-relaxed">Use on any device, any browser, completely responsive.</p>
             </div>
           </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium w-full pt-16 border-t border-white/10">
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No signup required</span>
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Instant generation</span>
             <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Privacy guaranteed</span>
