@@ -111,10 +111,10 @@ function App() {
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
-            <a href="/#tools" className="hover:text-black dark:hover:text-white transition-colors">All Tools</a>
+            <a href="/#features" className="hover:text-black dark:hover:text-white transition-colors">All Features</a>
             <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
             <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
-            <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors font-bold text-blue-600 dark:text-blue-400">FAQ</RouterLink>
+            <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <button 
@@ -170,8 +170,8 @@ function App() {
             <button onClick={() => document.getElementById('urlInput').focus()} className="btn-black w-full sm:w-auto">
               Get Started <ArrowRight size={16} />
             </button>
-            <a href="#tools" className="btn-white w-full sm:w-auto">
-              Explore Tools
+            <a href="#features" className="btn-white w-full sm:w-auto">
+              Explore Features
             </a>
           </div>
 
@@ -305,9 +305,9 @@ function App() {
         </div>
       </motion.section>
 
-      {/* Tools Grid */}
+      {/* Features Grid */}
       <motion.section 
-        id="tools" 
+        id="features" 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -331,15 +331,15 @@ function App() {
               { icon: <Scissors size={20} />, title: 'A/B Testing', desc: 'Split traffic between multiple links.' },
               { icon: <Layers size={20} />, title: 'Link-in-Bio', desc: 'Create a beautiful landing page.' },
               { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten thousands of links at once.' },
-            ].map((tool, i) => (
+            ].map((feature, i) => (
               <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)] group cursor-pointer shadow-sm dark:shadow-none">
                 <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {tool.icon}
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2 tracking-tight text-black dark:text-white">{tool.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{tool.desc}</p>
+                <h3 className="text-xl font-bold mb-2 tracking-tight text-black dark:text-white">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{feature.desc}</p>
                 <div className="flex items-center gap-1 text-[10px] font-bold text-gray-500 dark:text-gray-500 uppercase tracking-widest group-hover:text-black dark:group-hover:text-white transition-colors">
-                  Open Tool <ArrowRight size={12} />
+                  Open Feature <ArrowRight size={12} />
                 </div>
               </div>
             ))}
@@ -440,7 +440,7 @@ function App() {
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
-              <li><RouterLink to="/faq" className="hover:text-white transition-colors">FAQ</RouterLink></li>
+              <li><RouterLink to="/faq" className="hover:text-white transition-colors">About</RouterLink></li>
             </ul>
           </div>
         </div>
