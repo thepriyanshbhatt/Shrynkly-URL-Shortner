@@ -3,8 +3,11 @@ import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, 
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
+import { Routes, Route, useLocation, Link as RouterLink } from 'react-router-dom';
+import FAQ from './pages/FAQ';
 
 function App() {
+  const location = useLocation();
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -107,9 +110,10 @@ function App() {
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
-            <a href="#tools" className="hover:text-black dark:hover:text-white transition-colors">All Tools</a>
-            <a href="#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
-            <a href="#pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</a>
+            <a href="/#tools" className="hover:text-black dark:hover:text-white transition-colors">All Tools</a>
+            <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
+            <a href="/#pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</a>
+            <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors font-bold text-blue-600 dark:text-blue-400">FAQ</RouterLink>
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <button 
@@ -131,14 +135,24 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content with Grid Overlay */}
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center"
-      >
-        <div className="grid-overlay" />
+      {/* Main Routes with Animations */}
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={
+            <motion.main
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex flex-col items-center flex-grow"
+            >
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center"
+              >
+                <div className="grid-overlay" />
         
         {/* Hero Section */}
         <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
@@ -485,6 +499,11 @@ function App() {
         </div>
         <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Loved by <strong className="text-black dark:text-white">10,000+</strong> users worldwide</span>
       </div>
+            </motion.main>
+          } />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+      </AnimatePresence>
 
       {/* Footer */}
       <footer className="w-full bg-black dark:bg-[#050505] text-white pt-24 pb-8 px-6 relative z-10 transition-colors duration-300">
@@ -524,7 +543,7 @@ function App() {
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><RouterLink to="/faq" className="hover:text-white transition-colors">FAQ</RouterLink></li>
             </ul>
           </div>
         </div>
