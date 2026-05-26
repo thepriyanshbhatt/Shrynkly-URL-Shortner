@@ -354,42 +354,42 @@ function App() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="w-full bg-black dark:bg-[#050505] text-white py-32 px-4 relative z-10 border-b border-transparent dark:border-white/5 transition-colors duration-300"
+        className="w-full bg-white dark:bg-[#050505] text-black dark:text-white py-32 px-4 relative z-10 border-b border-gray-100 dark:border-white/5 transition-colors duration-300"
       >
         <div className="max-w-6xl mx-auto flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-center">Why Shrynkly?</h2>
-          <p className="text-gray-400 text-lg mb-16 text-center">Built for speed, privacy, and simplicity.</p>
+          <p className="text-gray-500 dark:text-gray-400 text-lg mb-16 text-center">Built for speed, privacy, and simplicity.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16">
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 hover:bg-gray-100 dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-gray-200 dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Zap size={20} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Lightning Fast</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Process links in milliseconds with our heavily optimized edge engine.</p>
+              <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Lightning Fast</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Process links in milliseconds with our heavily optimized edge engine.</p>
             </div>
             
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 hover:bg-gray-100 dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-gray-200 dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Shield size={20} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">100% Secure</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Your data never leaves your device. Links are processed locally.</p>
+              <h3 className="text-xl font-bold mb-3 text-black dark:text-white">100% Secure</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Your data never leaves your device. Links are processed locally.</p>
             </div>
             
-            <div className="bg-[#111111] dark:bg-[#0a0a0a] border border-white/5 dark:border-white/10 rounded-[2rem] p-8 hover:bg-[#151515] dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-transparent dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gray-50 dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 hover:bg-gray-100 dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+              <div className="w-12 h-12 bg-white dark:bg-white/10 text-black dark:text-white rounded-xl flex items-center justify-center mb-6 border border-gray-200 dark:border-white/20 group-hover:scale-110 transition-transform duration-300">
                 <Globe size={20} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Works Anywhere</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">Use on any device, any browser, completely responsive.</p>
+              <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Works Anywhere</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Use on any device, any browser, completely responsive.</p>
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-xs font-medium">
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> No signup required</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Instant generation</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Privacy guaranteed</span>
-            <span className="px-4 py-2 rounded-full border border-white/10 flex items-center gap-2"><Check size={14} className="text-green-500"/> Forever free</span>
+            <span className="px-4 py-2 rounded-full border border-gray-200 dark:border-white/10 flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-transparent"><Check size={14} className="text-green-500"/> No signup required</span>
+            <span className="px-4 py-2 rounded-full border border-gray-200 dark:border-white/10 flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-transparent"><Check size={14} className="text-green-500"/> Instant generation</span>
+            <span className="px-4 py-2 rounded-full border border-gray-200 dark:border-white/10 flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-transparent"><Check size={14} className="text-green-500"/> Privacy guaranteed</span>
+            <span className="px-4 py-2 rounded-full border border-gray-200 dark:border-white/10 flex items-center gap-2 text-gray-700 dark:text-gray-300 bg-white dark:bg-transparent"><Check size={14} className="text-green-500"/> Forever free</span>
           </div>
         </div>
       </motion.section>
