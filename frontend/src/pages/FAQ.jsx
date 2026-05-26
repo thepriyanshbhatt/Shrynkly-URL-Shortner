@@ -66,10 +66,6 @@ const faqCategories = [
       {
         question: "How do I edit a dynamic QR code?",
         answer: "Dynamic QR codes are available on the Pro and Enterprise plans. You can edit the destination URL from your dashboard without having to generate or print a new QR code."
-      },
-      {
-        question: "Why does my custom branded domain say 'Pending'?",
-        answer: "DNS propagation can take anywhere from a few minutes to 24 hours. If it's still pending after 24 hours, double-check that your DNS records exactly match the ones provided in your dashboard settings."
       }
     ]
   }
