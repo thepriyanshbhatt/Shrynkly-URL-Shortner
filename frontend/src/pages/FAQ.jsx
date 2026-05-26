@@ -21,7 +21,7 @@ const faqCategories = [
       },
       {
         question: "How long do the links last?",
-        answer: "By default, free links expire in 7 days to keep our system fast and clean. If you need links that last forever, you can upgrade to our Pro or Enterprise plans."
+        answer: "As a guest, your free links expire in 3 days to keep our system fast and clean. If you create a free account, your links will last for 7 days. If you need links that last forever, you can upgrade to our Pro or Enterprise plans."
       },
       {
         question: "How many links can I shorten?",
@@ -57,7 +57,7 @@ const faqCategories = [
     items: [
       {
         question: "Why is my link not working?",
-        answer: "If a link isn't working, it may have expired (free links expire after 7 days) or the original destination URL may no longer exist. Try generating a new link."
+        answer: "If a link isn't working, it may have expired (guest links expire after 3 days, free account links after 7 days) or the original destination URL may no longer exist. Try generating a new link."
       },
       {
         question: "I lost my short link, can I retrieve it?",
