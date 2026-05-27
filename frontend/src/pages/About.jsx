@@ -19,10 +19,12 @@ export default function About() {
   const rotations = ['-rotate-2', 'rotate-2', '-rotate-1', 'rotate-1'];
 
   const socialLinks = [
-    { icon: <Mail size={24} />, label: "Email", handle: "hello@shrynkly.com", href: "mailto:hello@shrynkly.com" },
-    { icon: <FaLinkedin size={24} />, label: "LinkedIn", handle: "linkedin.com/in/priyanshbhatt", href: "#" },
-    { icon: <FaGithub size={24} />, label: "GitHub", handle: "github.com/priyanshbhatt", href: "#" },
-    { icon: <FaXTwitter size={24} />, label: "X (Twitter)", handle: "x.com/priyanshbhatt", href: "#" },
+    { label: "E-mail", handle: "priyanshbhatt.dev@gmail.com", href: "mailto:priyanshbhatt.dev@gmail.com" },
+    { label: "Phone", handle: "+91 8955623907", href: "tel:+918955623907" },
+    { label: "LinkedIn", handle: "/in/thepriyanshbhatt", href: "https://linkedin.com/in/thepriyanshbhatt" },
+    { label: "GitHub", handle: "thepriyanshbhatt", href: "https://github.com/thepriyanshbhatt" },
+    { label: "X / Twitter", handle: "itspriyanshdev", href: "https://x.com/itspriyanshdev" },
+    { label: "Instagram", handle: "thepriyanshbhatt", href: "https://instagram.com/thepriyanshbhatt" },
   ];
 
   return (
@@ -135,28 +137,27 @@ export default function About() {
         </div>
 
         {/* 4. Let's Connect Section */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center w-full pb-12">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-black dark:text-white mb-12 text-center">Let's Connect</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
+          <div className="flex flex-col w-full max-w-4xl mx-auto space-y-3">
             {socialLinks.map((link, index) => (
               <a 
                 key={index}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-[2rem] p-6 flex items-center justify-between hover:shadow-xl dark:hover:shadow-none hover:border-black dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1"
+                className="group w-full bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-2xl p-4 md:p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300"
               >
-                <div className="flex items-center gap-5">
-                  <div className="w-14 h-14 bg-gray-100 dark:bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-gray-800 dark:text-gray-200 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-colors duration-300">
-                    {link.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-black dark:text-white mb-1">{link.label}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{link.handle}</p>
-                  </div>
+                <div className="w-1/3 md:w-1/4">
+                  <span className="text-sm md:text-base text-gray-500 dark:text-gray-400 font-medium">{link.label}</span>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:border-white dark:group-hover:text-black transition-all duration-300">
-                  <ExternalLink size={16} />
+                
+                <div className="w-auto text-right md:text-left flex-1 px-4 truncate">
+                  <span className="text-base md:text-lg font-bold text-black dark:text-white truncate">{link.handle}</span>
+                </div>
+
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-gray-100 dark:bg-[#222] border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-400 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
               </a>
             ))}
