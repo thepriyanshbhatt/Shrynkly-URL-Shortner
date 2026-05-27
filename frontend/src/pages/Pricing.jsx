@@ -14,13 +14,13 @@ export default function Pricing() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="w-full bg-[#fafafa] dark:bg-[#050505] py-32 px-4 relative z-10 transition-colors duration-300 min-h-[80vh] flex flex-col items-center"
+      className="w-full bg-[#fafafa] dark:bg-[#050505] pt-16 pb-24 px-4 relative z-10 transition-colors duration-300 min-h-[80vh] flex flex-col items-center"
     >
       <div className="max-w-6xl mx-auto flex flex-col items-center w-full">
         <div className="bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
           Pricing
         </div>
-        <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-24 text-black dark:text-white text-center">Pick a plan that scales with you</h2>
+        <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-12 text-black dark:text-white text-center">Pick a plan that scales with you</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto items-stretch">
           {/* Free Tier */}
