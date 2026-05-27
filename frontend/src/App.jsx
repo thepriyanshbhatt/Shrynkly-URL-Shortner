@@ -6,6 +6,7 @@ import { useLinkStore } from './stores/useLinkStore';
 import { Routes, Route, useLocation, Link as RouterLink } from 'react-router-dom';
 import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
+import About from './pages/About';
 
 function App() {
   const location = useLocation();
@@ -113,7 +114,7 @@ function App() {
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
             <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
             <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
-            <RouterLink to="/faq" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
+            <RouterLink to="/about" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <button 
@@ -395,6 +396,7 @@ function App() {
           } />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </AnimatePresence>
 
@@ -436,7 +438,7 @@ function App() {
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
-              <li><RouterLink to="/faq" className="hover:text-white transition-colors">About</RouterLink></li>
+              <li><RouterLink to="/about" className="hover:text-white transition-colors">About</RouterLink></li>
             </ul>
           </div>
         </div>
