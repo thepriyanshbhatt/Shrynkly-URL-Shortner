@@ -167,7 +167,7 @@ function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full">
-            <button onClick={() => document.getElementById('urlInput').focus()} className="btn-black w-full sm:w-auto">
+            <button onClick={() => document.getElementById('urlInput').focus()} className="btn-white w-full sm:w-auto">
               Get Started <ArrowRight size={16} />
             </button>
             <a href="#features" className="btn-white w-full sm:w-auto">
