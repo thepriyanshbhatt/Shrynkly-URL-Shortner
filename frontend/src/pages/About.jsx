@@ -127,7 +127,7 @@ export default function About() {
         {/* 4. Let's Connect Section */}
         <div className="flex flex-col items-center w-full pb-12">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-black dark:text-white mb-12 text-center">Let's Connect</h2>
-          <div className="flex flex-col w-full max-w-4xl mx-auto space-y-3">
+          <div className="flex flex-col w-full max-w-2xl mx-auto space-y-3">
             {socialLinks.map((link, index) => (
               <a 
                 key={index}
