@@ -3,13 +3,14 @@ import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, 
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
-import { Routes, Route, useLocation, Link as RouterLink } from 'react-router-dom';
+import { Routes, Route, useLocation, Link as RouterLink, useNavigate } from 'react-router-dom';
 import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -25,6 +26,25 @@ function App() {
   }, [theme]);
 
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+
+  const handleWhyClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('why');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById('why');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', '/#why');
+      }
+    }
+  };
 
   const handleLogoClick = (e) => {
     if (location.pathname === '/') {
@@ -122,7 +142,7 @@ function App() {
             </RouterLink>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
-            <a href="/#why" className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
+            <a href="/#why" onClick={handleWhyClick} className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
             <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
             <RouterLink to="/about" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
           </nav>
