@@ -96,7 +96,7 @@ export default function About() {
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 pt-12 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-translate-y-2 hover:-rotate-1 group ${rotations[index % 4]}`}
+                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 pt-12 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-translate-y-2 hover:-rotate-1 hover:border-black dark:hover:border-white/50 group ${rotations[index % 4]}`}
               >
                 {/* Top Left Pin */}
                 <div className="absolute top-4 left-4 z-20 w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-gray-800 shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.2),_1px_1px_2px_rgba(0,0,0,0.1)]"></div>
