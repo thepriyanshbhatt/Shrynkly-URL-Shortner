@@ -122,19 +122,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* 3. The Quote Block */}
-        <div className="w-full bg-black dark:bg-[#111] rounded-[3rem] p-12 lg:p-24 text-center shadow-2xl relative overflow-hidden border border-black dark:border-white/10">
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-            <p className="text-2xl md:text-3xl lg:text-5xl font-medium text-white leading-[1.3] mb-10 tracking-tight">
-              "I love the challenge of coding and design, focusing on creating seamless user experiences across all platforms."
-            </p>
-            <div className="flex items-center gap-4 text-gray-400 font-medium tracking-wide text-sm uppercase">
-              <span className="w-12 h-[1px] bg-gray-600"></span>
-              My Development Philosophy
-            </div>
-          </div>
-        </div>
+
 
         {/* 4. Let's Connect Section */}
         <div className="flex flex-col items-center w-full pb-12">
