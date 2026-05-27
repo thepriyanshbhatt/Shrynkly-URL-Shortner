@@ -96,15 +96,14 @@ export default function About() {
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-rotate-1 group ${rotations[index % 4]}`}
+                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 pt-12 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-rotate-1 group ${rotations[index % 4]}`}
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                {/* The Pin */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center drop-shadow-md">
-                  <div className="w-5 h-5 rounded-full bg-gradient-to-b from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 border border-gray-400 dark:border-black flex items-center justify-center shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2)]">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 dark:from-gray-500 dark:to-gray-700 shadow-[inset_0_1px_1px_rgba(255,255,255,0.5)]"></div>
-                  </div>
-                </div>
+                {/* Top Left Pin */}
+                <div className="absolute top-4 left-4 z-20 w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-gray-800 shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.2),_1px_1px_2px_rgba(0,0,0,0.1)]"></div>
+                
+                {/* Top Right Pin */}
+                <div className="absolute top-4 right-4 z-20 w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-gray-800 shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.2),_1px_1px_2px_rgba(0,0,0,0.1)]"></div>
 
                 {/* The content container that swings up slightly on hover to simulate a breeze/pickup */}
                 <div className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-x-[12deg] flex flex-col h-full relative z-10">
