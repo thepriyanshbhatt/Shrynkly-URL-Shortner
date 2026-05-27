@@ -22,7 +22,7 @@ export default function Pricing() {
         </div>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-24 text-black dark:text-white text-center">Pick a plan that scales with you</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto items-center">
           {/* Free Tier */}
           <div className="bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-sm dark:shadow-none hover:border-gray-300 dark:hover:border-white/20 transition-colors">
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Free</h3>
@@ -60,7 +60,7 @@ export default function Pricing() {
             </div>
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 mt-2">Pro</h3>
             <div className="flex items-end gap-2 mb-8">
-              <span className="text-5xl font-black text-black dark:text-white">$14</span>
+              <span className="text-5xl font-black text-black dark:text-white">$4.99</span>
               <span className="text-sm font-medium text-gray-500 mb-1">per month</span>
             </div>
             <ul className="flex flex-col gap-4 mb-10 flex-1">
@@ -86,33 +86,6 @@ export default function Pricing() {
               Go Pro
             </button>
           </div>
-
-          {/* Enterprise Tier */}
-          <div className="bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-sm dark:shadow-none hover:border-gray-300 dark:hover:border-white/20 transition-colors">
-            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Enterprise</h3>
-            <div className="flex items-end gap-2 mb-8">
-              <span className="text-5xl font-black text-black dark:text-white">Custom</span>
-            </div>
-            <ul className="flex flex-col gap-4 mb-10 flex-1">
-              {[
-                'Unlimited links',
-                'Custom link duration',
-                'SSO & SAML',
-                'Audit logs',
-                '99.99% SLA',
-                'Dedicated success manager'
-              ].map((feature, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <button className="w-full py-3 px-4 rounded-xl font-bold bg-gray-50 hover:bg-gray-100 dark:bg-white/5 dark:hover:bg-white/10 text-black dark:text-white border border-gray-200 dark:border-white/10 transition-colors">
-              Contact Sales
-            </button>
-          </div>
-
         </div>
       </div>
     </motion.div>
