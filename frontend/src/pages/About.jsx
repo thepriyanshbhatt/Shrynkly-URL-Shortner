@@ -92,12 +92,11 @@ export default function About() {
         {/* 2. What I Do Section */}
         <div className="flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-black dark:text-white mb-12 text-center">What I Do</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full px-2 [perspective:1000px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full px-2">
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 pt-12 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-rotate-1 group ${rotations[index % 4]}`}
-                style={{ transformStyle: 'preserve-3d' }}
+                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 pt-12 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-translate-y-2 hover:-rotate-1 group ${rotations[index % 4]}`}
               >
                 {/* Top Left Pin */}
                 <div className="absolute top-4 left-4 z-20 w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-gray-800 shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.2),_1px_1px_2px_rgba(0,0,0,0.1)]"></div>
@@ -105,9 +104,9 @@ export default function About() {
                 {/* Top Right Pin */}
                 <div className="absolute top-4 right-4 z-20 w-4 h-4 rounded-full border-2 border-gray-300 dark:border-gray-500 bg-gray-50 dark:bg-gray-800 shadow-[inset_-1px_-1px_2px_rgba(0,0,0,0.2),_1px_1px_2px_rgba(0,0,0,0.1)]"></div>
 
-                {/* The content container that swings up slightly on hover to simulate a breeze/pickup */}
-                <div className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-x-[12deg] flex flex-col h-full relative z-10">
-                  <div className="w-14 h-14 bg-gray-50 dark:bg-[#1a1a1a] rounded-xl flex items-center justify-center text-black dark:text-white mb-8 border border-gray-100 dark:border-white/5 transition-transform duration-300 relative z-10">
+                {/* The content container that swings up slightly on hover */}
+                <div className="transition-transform duration-500 flex flex-col h-full relative z-10">
+                  <div className="w-14 h-14 bg-gray-50 dark:bg-[#1a1a1a] rounded-xl flex items-center justify-center text-black dark:text-white mb-8 border border-gray-100 dark:border-white/5 transition-transform duration-300 relative z-10 group-hover:scale-110">
                     {skill.icon}
                   </div>
                   <h3 className="text-lg font-black text-black dark:text-white mb-3 relative z-10">{skill.title}</h3>
