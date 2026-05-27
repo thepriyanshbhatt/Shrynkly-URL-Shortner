@@ -46,10 +46,10 @@
   }
   
   .btn-black {
-    @apply bg-black text-white hover:bg-[#1a1a1a] dark:bg-white dark:text-black dark:hover:bg-gray-100 transition-all rounded-full font-semibold px-6 py-3 flex items-center justify-center gap-2 active:scale-95 border border-transparent;
+    @apply bg-black text-white hover:bg-[#1a1a1a] dark:bg-white dark:text-black dark:hover:bg-gray-100 transition-all rounded-full font-semibold px-6 py-3 flex items-center justify-center gap-2 active:scale-95 border border-transparent hover:scale-105 hover:shadow-lg;
   }
   
   .btn-white {
-    @apply bg-white text-black border-2 border-black hover:bg-gray-50 dark:bg-transparent dark:text-white dark:border-white dark:hover:bg-white/10 transition-all rounded-full font-semibold px-6 py-3 flex items-center justify-center gap-2 active:scale-95;
+    @apply bg-white text-black border-2 border-black hover:bg-gray-50 dark:bg-transparent dark:text-white dark:border-white dark:hover:bg-white/10 transition-all rounded-full font-semibold px-6 py-3 flex items-center justify-center gap-2 active:scale-95 hover:scale-105 hover:shadow-lg;
   }
 }
