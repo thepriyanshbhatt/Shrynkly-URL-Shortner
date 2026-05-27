@@ -38,35 +38,54 @@ export default function About() {
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-32">
         
         {/* 1. Hero Section */}
-        <div className="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-          <div className="bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-300 text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 inline-block">
-            About the Builder
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 lg:gap-20">
+          {/* Left Side: Image */}
+          <div className="w-full md:w-5/12 flex justify-center relative">
+            <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-200 dark:bg-[#111] shadow-2xl border border-gray-200 dark:border-white/10">
+              <img 
+                src="/priyansh.jpg" 
+                alt="Priyansh Bhatt" 
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+              {/* Badge */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black text-xs font-black uppercase tracking-widest px-6 py-2.5 rounded-full whitespace-nowrap shadow-xl">
+                Founder & Creator
+              </div>
+            </div>
           </div>
-          
-          <h1 className="text-5xl lg:text-7xl font-black tracking-tight mb-8 text-black dark:text-white leading-[1.1]">
-            Hi, I'm <br className="hidden md:block" />
-            <span className="text-gray-500 dark:text-gray-400">Priyansh Bhatt</span>
-          </h1>
-          
-          <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl leading-relaxed mx-auto">
-            I am a passionate software engineer and the creator of Shrynkly. My expertise lies in building dynamic, highly-optimized web applications that solve complex problems with elegant, minimalist design. 
-          </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 w-full">
-            <a 
-              href="https://priiaynsh.framer.ai" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2 bg-black dark:bg-white text-white dark:text-black py-4 px-8 rounded-full font-bold text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:scale-105 active:scale-95 shadow-md flex-1 sm:flex-none"
-            >
-              View Portfolio <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a 
-              href="mailto:hello@shrynkly.com" 
-              className="flex items-center justify-center gap-2 bg-transparent border-2 border-black dark:border-white text-black dark:text-white py-4 px-8 rounded-full font-bold text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:scale-105 active:scale-95 flex-1 sm:flex-none"
-            >
-              Get in Touch
-            </a>
+          {/* Right Side: Text */}
+          <div className="w-full md:w-7/12 text-center md:text-left flex flex-col items-center md:items-start">
+            <div className="bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-300 text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 inline-block">
+              About the Builder
+            </div>
+            
+            <h1 className="text-5xl lg:text-7xl font-black tracking-tight mb-8 text-black dark:text-white leading-[1.1]">
+              Hi, I'm <br className="hidden md:block" />
+              <span className="text-gray-500 dark:text-gray-400">Priyansh Bhatt</span>
+            </h1>
+            
+            <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-xl leading-relaxed">
+              I am a passionate software engineer and the creator of Shrynkly. My expertise lies in building dynamic, highly-optimized web applications that solve complex problems with elegant, minimalist design. 
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 w-full">
+              <a 
+                href="https://priiaynsh.framer.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-2 bg-black dark:bg-white text-white dark:text-black py-4 px-8 rounded-full font-bold text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:scale-105 active:scale-95 shadow-md flex-1 sm:flex-none"
+              >
+                View Portfolio <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+              <a 
+                href="mailto:hello@shrynkly.com" 
+                className="flex items-center justify-center gap-2 bg-transparent border-2 border-black dark:border-white text-black dark:text-white py-4 px-8 rounded-full font-bold text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:scale-105 active:scale-95 flex-1 sm:flex-none"
+              >
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
 
