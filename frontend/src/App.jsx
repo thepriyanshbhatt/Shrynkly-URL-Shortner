@@ -174,8 +174,8 @@ function App() {
             </a>
           </div>
 
-          {/* Shortener Box - Oval Shape */}
-          <div className="w-full max-w-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-full p-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none relative z-20 transition-all duration-500 hover:shadow-xl hover:border-gray-400 dark:hover:border-white/30 focus-within:ring-4 focus-within:ring-black/5 dark:focus-within:ring-white/10 focus-within:border-black dark:focus-within:border-white">
+          {/* Shortener Box */}
+          <div className="w-full max-w-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-3xl sm:rounded-full p-2 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none relative z-20 transition-all duration-500 hover:shadow-xl hover:border-gray-400 dark:hover:border-white/30 focus-within:ring-4 focus-within:ring-black/5 dark:focus-within:ring-white/10 focus-within:border-black dark:focus-within:border-white">
             <form onSubmit={handleShorten} className="flex flex-col sm:flex-row gap-2">
               <input
                 id="urlInput"
@@ -183,12 +183,12 @@ function App() {
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="Paste your long URL here..."
-                className="flex-1 bg-transparent border-0 py-4 px-6 text-lg focus:outline-none placeholder:text-gray-400 dark:placeholder:text-gray-600 font-medium text-black dark:text-white rounded-full"
+                className="flex-1 bg-transparent border-0 py-3 px-4 sm:py-4 sm:px-6 text-base sm:text-lg focus:outline-none placeholder:text-gray-400 dark:placeholder:text-gray-600 font-medium text-black dark:text-white rounded-2xl sm:rounded-full"
               />
               <button 
                 type="submit"
                 disabled={loading}
-                className="btn-black flex items-center justify-center min-w-[140px]"
+                className="btn-black flex items-center justify-center min-w-[140px] rounded-2xl sm:rounded-full py-3 sm:py-4"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white dark:border-black/30 dark:border-t-black rounded-full animate-spin" />
