@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Github, Twitter, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { FaInstagram, FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6';
 
 export default function About() {
   // Ensure we scroll to the top of the page when the route loads
@@ -9,10 +10,10 @@ export default function About() {
   }, []);
 
   const socialLinks = [
-    { icon: <Instagram size={20} />, label: "Instagram", href: "#" },
-    { icon: <Linkedin size={20} />, label: "LinkedIn", href: "#" },
-    { icon: <Github size={20} />, label: "GitHub", href: "#" },
-    { icon: <Twitter size={20} />, label: "X (Twitter)", href: "#" },
+    { icon: <FaInstagram size={20} />, label: "Instagram", href: "#" },
+    { icon: <FaLinkedin size={20} />, label: "LinkedIn", href: "#" },
+    { icon: <FaGithub size={20} />, label: "GitHub", href: "#" },
+    { icon: <FaXTwitter size={20} />, label: "X (Twitter)", href: "#" },
   ];
 
   return (
