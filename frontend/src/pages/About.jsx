@@ -132,7 +132,7 @@ export default function About() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-full bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-2xl p-4 md:p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-all duration-300"
+                className="group w-full bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-2xl p-4 md:p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-[#1a1a1a] hover:border-black dark:hover:border-white/50 transition-all duration-300"
               >
                 <div className="w-1/3 md:w-1/4">
                   <span className="text-sm md:text-base text-gray-500 dark:text-gray-400 font-medium">{link.label}</span>
