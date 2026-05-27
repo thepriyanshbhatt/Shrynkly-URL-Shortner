@@ -81,7 +81,7 @@ export default function About() {
               </a>
               <a 
                 href="mailto:hello@shrynkly.com" 
-                className="flex items-center justify-center gap-2 bg-transparent border-2 border-black dark:border-white text-black dark:text-white py-4 px-8 rounded-full font-bold text-sm hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:scale-105 active:scale-95 flex-1 sm:flex-none"
+                className="group flex items-center justify-center gap-2 bg-black dark:bg-white text-white dark:text-black py-4 px-8 rounded-full font-bold text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:scale-105 active:scale-95 shadow-md flex-1 sm:flex-none"
               >
                 Get in Touch
               </a>
