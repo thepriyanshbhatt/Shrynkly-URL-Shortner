@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link2, Clock, BarChart, QrCode, Users, Minus, Calendar, LineChart, Layers, Edit, Lock, Headphones } from 'lucide-react';
 
 export default function Pricing() {
   // Ensure we scroll to the top of the page when the route loads
@@ -31,15 +32,19 @@ export default function Pricing() {
             </div>
             <ul className="flex flex-col gap-4 mb-10 flex-1">
               {[
-                '50 links / mo',
-                'Links expire in 7 days',
-                'Basic analytics',
-                'Standard QR codes',
-                'Community support'
+                { text: '50 links / mo', icon: <Link2 size={16} /> },
+                { text: 'Links expire in 7 days', icon: <Clock size={16} /> },
+                { text: 'Basic analytics (clicks only)', icon: <BarChart size={16} /> },
+                { text: 'Static QR codes', icon: <QrCode size={16} /> },
+                { text: 'Community support', icon: <Users size={16} /> },
+                { text: 'No bulk shortening', icon: <Minus size={16} />, negative: true },
+                { text: 'No link editing after creation', icon: <Minus size={16} />, negative: true }
               ].map((feature, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                  {feature}
+                <li key={i} className={`flex items-center gap-3 text-sm font-medium ${feature.negative ? 'text-gray-400 dark:text-gray-500' : 'text-gray-600 dark:text-gray-300'}`}>
+                  <div className={`shrink-0 ${feature.negative ? 'text-gray-400 dark:text-gray-500' : 'text-gray-500 dark:text-gray-400'}`}>
+                    {feature.icon}
+                  </div>
+                  {feature.text}
                 </li>
               ))}
             </ul>
@@ -49,9 +54,9 @@ export default function Pricing() {
           </div>
 
           {/* Pro Tier */}
-          <div className="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/20 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-2xl dark:shadow-[0_0_40px_rgba(255,255,255,0.03)] relative transform md:scale-105 z-10">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap">
-              Most Popular
+          <div className="bg-white dark:bg-[#111111] border-2 border-blue-500 dark:border-blue-600 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-2xl dark:shadow-[0_0_40px_rgba(37,99,235,0.1)] relative transform md:scale-105 z-10">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 dark:bg-blue-600/90 text-white text-xs font-semibold px-4 py-1 rounded-full whitespace-nowrap shadow-sm">
+              Most popular
             </div>
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 mt-2">Pro</h3>
             <div className="flex items-end gap-2 mb-8">
@@ -60,16 +65,20 @@ export default function Pricing() {
             </div>
             <ul className="flex flex-col gap-4 mb-10 flex-1">
               {[
-                '1,000 links / mo',
-                '1 month link expiration',
-                'Advanced analytics',
-                '2 Custom branded domains',
-                'Dynamic QR codes',
-                'Priority support'
+                { text: '1,000 links / mo', icon: <Link2 size={16} /> },
+                { text: '1-month link expiration', icon: <Calendar size={16} /> },
+                { text: 'Deep analytics (clicks, location, referrers)', icon: <LineChart size={16} /> },
+                { text: 'Dynamic (editable) QR codes', icon: <QrCode size={16} /> },
+                { text: 'Bulk shortening', icon: <Layers size={16} /> },
+                { text: 'Edit destination URL after creation', icon: <Edit size={16} /> },
+                { text: 'Password-protected links', icon: <Lock size={16} /> },
+                { text: 'Priority support', icon: <Headphones size={16} /> }
               ].map((feature, i) => (
-                <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 font-medium">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>
-                  {feature}
+                <li key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-200 font-medium">
+                  <div className="shrink-0 text-blue-600 dark:text-blue-400">
+                    {feature.icon}
+                  </div>
+                  {feature.text}
                 </li>
               ))}
             </ul>
