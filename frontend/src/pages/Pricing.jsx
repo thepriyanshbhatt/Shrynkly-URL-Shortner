@@ -22,7 +22,7 @@ export default function Pricing() {
         </div>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-24 text-black dark:text-white text-center">Pick a plan that scales with you</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto items-stretch">
           {/* Free Tier */}
           <div className="bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-sm dark:shadow-none hover:border-gray-300 dark:hover:border-white/20 transition-colors">
             <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Free</h3>
@@ -54,7 +54,7 @@ export default function Pricing() {
           </div>
 
           {/* Pro Tier */}
-          <div className="bg-white dark:bg-[#111111] border-2 border-blue-500 dark:border-blue-600 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-2xl dark:shadow-[0_0_40px_rgba(37,99,235,0.1)] relative transform md:scale-105 z-10">
+          <div className="bg-white dark:bg-[#111111] border-2 border-blue-500 dark:border-blue-600 rounded-[2rem] p-8 lg:p-10 flex flex-col h-full shadow-2xl dark:shadow-[0_0_40px_rgba(37,99,235,0.1)] relative z-10">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 dark:bg-blue-600/90 text-white text-xs font-semibold px-4 py-1 rounded-full whitespace-nowrap shadow-sm">
               Most popular
             </div>
