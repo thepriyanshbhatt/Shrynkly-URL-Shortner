@@ -106,7 +106,7 @@ function App() {
       <header className="sticky top-0 w-full z-50 px-4 py-4 border-b border-gray-200 dark:border-white/10 bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <RouterLink to="/" className="font-bold text-2xl tracking-tight flex items-center gap-2 text-black dark:text-white hover:opacity-80 transition-opacity">
+            <RouterLink to="/" onClick={() => window.scrollTo(0, 0)} className="font-bold text-2xl tracking-tight flex items-center gap-2 text-black dark:text-white hover:opacity-80 transition-opacity">
               <img src="/logo.png" alt="Shrynkly Logo" className="h-8 w-auto object-contain" />
               Shrynkly
             </RouterLink>
@@ -406,10 +406,10 @@ function App() {
       <footer className="w-full bg-black dark:bg-[#050505] text-white pt-24 pb-8 px-6 relative z-10 transition-colors duration-300">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1">
-            <span className="font-bold text-2xl tracking-tight flex items-center gap-2 mb-4 text-white">
+            <RouterLink to="/" onClick={() => window.scrollTo(0, 0)} className="font-bold text-2xl tracking-tight flex items-center gap-2 mb-4 text-white hover:opacity-80 transition-opacity">
               <img src="/logo.png" alt="Shrynkly Logo" className="h-8 w-auto object-contain" />
               Shrynkly
-            </span>
+            </RouterLink>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
               Free online link tools for everyone. Process links securely in your browser — your data never leaves your device.
             </p>
