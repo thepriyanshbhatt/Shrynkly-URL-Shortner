@@ -90,28 +90,31 @@ export default function About() {
         {/* 2. What I Do Section */}
         <div className="flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-black dark:text-white mb-12 text-center">What I Do</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full px-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full px-2 [perspective:1000px]">
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-lg p-8 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 hover:-translate-y-2 group ${rotations[index % 4]}`}
+                className={`relative bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-sm p-8 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.1)] dark:shadow-[0_5px_15px_-3px_rgba(255,255,255,0.05)] transition-all duration-500 origin-top hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_25px_-5px_rgba(255,255,255,0.08)] hover:-rotate-1 group ${rotations[index % 4]}`}
+                style={{ transformStyle: 'preserve-3d' }}
               >
                 {/* The Pin */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center group-hover:-translate-y-1 transition-transform duration-300">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-gray-600 to-black dark:from-gray-300 dark:to-white shadow-[0_2px_4px_rgba(0,0,0,0.3)] dark:shadow-[0_2px_4px_rgba(255,255,255,0.2)] relative z-20 border border-black dark:border-white">
-                    <div className="absolute top-0.5 left-0.5 w-1.5 h-1.5 bg-white/40 dark:bg-black/40 rounded-full blur-[0.5px]"></div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center drop-shadow-md">
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-b from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 border border-gray-400 dark:border-black flex items-center justify-center shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2)]">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 dark:from-gray-500 dark:to-gray-700 shadow-[inset_0_1px_1px_rgba(255,255,255,0.5)]"></div>
                   </div>
-                  <div className="w-1 h-3 bg-black/20 dark:bg-white/20 -mt-1 rounded-full rotate-45 transform origin-top blur-[0.5px]"></div>
                 </div>
 
-                <div className="w-14 h-14 bg-gray-50 dark:bg-[#1a1a1a] rounded-xl flex items-center justify-center text-black dark:text-white mb-8 border border-gray-100 dark:border-white/5 group-hover:scale-110 transition-transform duration-300 relative z-10">
-                  {skill.icon}
+                {/* The content container that swings up slightly on hover to simulate a breeze/pickup */}
+                <div className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-x-[12deg] flex flex-col h-full relative z-10">
+                  <div className="w-14 h-14 bg-gray-50 dark:bg-[#1a1a1a] rounded-xl flex items-center justify-center text-black dark:text-white mb-8 border border-gray-100 dark:border-white/5 transition-transform duration-300 relative z-10">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-lg font-black text-black dark:text-white mb-3 relative z-10">{skill.title}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed relative z-10">{skill.desc}</p>
                 </div>
-                <h3 className="text-lg font-black text-black dark:text-white mb-3 relative z-10">{skill.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed relative z-10">{skill.desc}</p>
                 
-                {/* Subtle paper fold effect bottom right */}
-                <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-tl from-gray-100 to-transparent dark:from-[#1a1a1a] rounded-tl-lg rounded-br-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Subtle paper texture/gradient */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 dark:to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm"></div>
               </div>
             ))}
           </div>
