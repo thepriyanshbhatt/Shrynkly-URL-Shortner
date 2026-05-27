@@ -322,9 +322,8 @@ function App() {
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto italic">Everything you need to work with your links, completely free and 100% private.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Globe size={20} />, title: 'Branded Domains', desc: 'Connect your own domain to build trust.' },
               { icon: <QrCode size={20} />, title: 'QR Code', desc: 'Create editable QR codes instantly.' },
               { icon: <History size={20} />, title: 'Deep Analytics', desc: 'Track clicks, locations, and referrers.' },
               { icon: <Link size={20} />, title: 'Bulk Shorten', desc: 'Shorten multiple links at once.' },
