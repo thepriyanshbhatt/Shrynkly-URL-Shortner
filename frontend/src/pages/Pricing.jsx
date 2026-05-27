@@ -66,7 +66,7 @@ export default function Pricing() {
             <ul className="flex flex-col gap-4 mb-10 flex-1">
               {[
                 { text: '1,000 links / mo', icon: <Link2 size={16} /> },
-                { text: '1-month link expiration', icon: <Calendar size={16} /> },
+                { text: 'Custom link expiration', icon: <Calendar size={16} /> },
                 { text: 'Deep analytics (clicks, location, referrers)', icon: <LineChart size={16} /> },
                 { text: 'Dynamic (editable) QR codes', icon: <QrCode size={16} /> },
                 { text: 'Bulk shortening', icon: <Layers size={16} /> },
