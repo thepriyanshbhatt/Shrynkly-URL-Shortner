@@ -41,6 +41,10 @@ export default function Dashboard() {
   const [links, setLinks] = useState([]);
   const [loadingLinks, setLoadingLinks] = useState(true);
 
+  // Shortening State
+  const [url, setUrl] = useState('');
+  const [isShortening, setIsShortening] = useState(false);
+
   // Redirect if not logged in
   useEffect(() => {
     if (!authLoading && !user) {
@@ -73,6 +77,47 @@ export default function Dashboard() {
     };
     fetchLinks();
   }, [user]);
+
+  const handleShorten = async (e) => {
+    e.preventDefault();
+    if (!url.trim()) return;
+    
+    setIsShortening(true);
+    try {
+      const { session } = await import('../utils/supabase').then(m => m.supabase.auth.getSession()).then(res => res.data);
+      const headers = { 'Content-Type': 'application/json' };
+      if (session?.access_token) {
+        headers['Authorization'] = `Bearer ${session.access_token}`;
+      }
+      
+      const apiUrl = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/shorten` : '/api/shorten';
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ url: url.trim() })
+      });
+      
+      if (res.ok) {
+        const data = await res.json();
+        const newLink = {
+          shortCode: data.shortCode,
+          targetUrl: data.targetUrl || url.trim(),
+          clicks: 0,
+          createdAt: new Date().toISOString()
+        };
+        // Prepend the new link so it shows up instantly at the top
+        setLinks(prev => [newLink, ...prev]);
+        setUrl('');
+      } else {
+        alert('Failed to shorten URL');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error');
+    } finally {
+      setIsShortening(false);
+    }
+  };
 
   if (authLoading || !user) {
     return <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#0a0a0a]"><div className="w-8 h-8 border-4 border-black border-t-transparent dark:border-white dark:border-t-transparent rounded-full animate-spin" /></div>;
@@ -239,6 +284,26 @@ export default function Dashboard() {
                     </div>
                   )}
                 </div>
+              </div>
+
+              {/* In-Dashboard Shortener */}
+              <div className="bg-white dark:bg-[#111111] p-4 rounded-3xl border border-gray-200 dark:border-white/10 shadow-sm mb-6 flex items-center gap-4 transition-all duration-300 focus-within:ring-2 focus-within:ring-black dark:focus-within:ring-white/20">
+                <form onSubmit={handleShorten} className="flex-1 flex gap-2 w-full">
+                  <input
+                    type="text"
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)}
+                    placeholder="Paste a long URL to shorten..."
+                    className="flex-1 bg-transparent border-0 focus:outline-none px-4 py-2 text-sm md:text-base text-black dark:text-white placeholder:text-gray-400"
+                  />
+                  <button 
+                    type="submit" 
+                    disabled={isShortening}
+                    className="btn-black py-2 px-6 rounded-full text-sm shrink-0"
+                  >
+                    {isShortening ? 'Shortening...' : 'Shorten'}
+                  </button>
+                </form>
               </div>
 
               <div className="bg-white dark:bg-[#111111] rounded-3xl border border-gray-200 dark:border-white/10 overflow-hidden shadow-sm">
