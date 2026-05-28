@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, Globe, Layers, Shield, Clock, Sun, Moon, BarChart2, LayoutDashboard, Smartphone } from 'lucide-react';
+import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, Globe, Layers, Shield, Clock, Sun, Moon, BarChart2, LayoutDashboard, Smartphone, Ban } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
@@ -360,6 +360,7 @@ function App() {
               { icon: <BarChart2 size={20} />, title: 'Click tracking', desc: 'See how many times your link was clicked, updated in real time.' },
               { icon: <LayoutDashboard size={20} />, title: 'Link dashboard', desc: 'Manage all your links in one place. Copy, share, or delete anytime.' },
               { icon: <Smartphone size={20} />, title: 'Works on any device', desc: 'Fully responsive — shorten and manage links from your phone, tablet, or desktop.' },
+              { icon: <Ban size={20} />, title: 'Zero Ads. Ever.', desc: 'Whether you use the free plan or upgrade, there are absolutely 0 ads. No pop-ups, no tracking, no exceptions.' },
             ].map((feature, i) => (
               <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)] group cursor-pointer shadow-sm dark:shadow-none">
                 <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
