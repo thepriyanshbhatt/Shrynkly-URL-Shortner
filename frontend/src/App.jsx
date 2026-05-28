@@ -9,6 +9,7 @@ import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Disclaimer from './pages/Disclaimer';
 import HowItWorks from './pages/HowItWorks';
+import Dashboard from './pages/Dashboard';
 import CookieConsent from './components/CookieConsent';
 import { useAuth } from './context/AuthContext';
 
@@ -191,8 +192,18 @@ function App() {
                     </div>
                     <button 
                       onClick={() => {
+                        setShowAuthDropdown(false);
+                        navigate('/dashboard');
+                      }}
+                      className="w-full text-left px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors border-b border-gray-200 dark:border-white/10"
+                    >
+                      Dashboard
+                    </button>
+                    <button 
+                      onClick={() => {
                         signOut();
                         setShowAuthDropdown(false);
+                        navigate('/');
                       }}
                       className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
                     >
@@ -473,6 +484,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </AnimatePresence>
 
