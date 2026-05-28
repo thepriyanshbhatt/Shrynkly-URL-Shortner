@@ -40,22 +40,16 @@ function App() {
         if (element) {
           clearInterval(tryScroll);
           setTimeout(() => {
-            window.scrollTo({
-              top: element.getBoundingClientRect().top + window.scrollY - 80,
-              behavior: 'smooth'
-            });
-          }, 150); // Small buffer for layout shift
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
         }
         attempts++;
-        if (attempts > 20) clearInterval(tryScroll); // Stop after 1 second
+        if (attempts > 20) clearInterval(tryScroll);
       }, 50);
     } else {
       const element = document.getElementById('why');
       if (element) {
-        window.scrollTo({
-          top: element.getBoundingClientRect().top + window.scrollY - 80,
-          behavior: 'smooth'
-        });
+        element.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
