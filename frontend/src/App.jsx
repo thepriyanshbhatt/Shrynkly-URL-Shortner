@@ -10,6 +10,7 @@ import About from './pages/About';
 import Disclaimer from './pages/Disclaimer';
 import HowItWorks from './pages/HowItWorks';
 import CookieConsent from './components/CookieConsent';
+import { useAuth } from './context/AuthContext';
 
 function App() {
   const location = useLocation();
@@ -70,7 +71,8 @@ function App() {
   const [error, setError] = useState('');
   const [currentResult, setCurrentResult] = useState(null);
   const [showHistory, setShowHistory] = useState(false);
-
+  const [showAuthDropdown, setShowAuthDropdown] = useState(false);
+  const { user, signInWithGoogle, signOut } = useAuth();
   const { links, addLink, removeLink, clearLinks } = useLinkStore();
   const [copiedId, setCopiedId] = useState(null);
   const [showQR, setShowQR] = useState(false);
@@ -96,10 +98,16 @@ function App() {
     setLoading(true);
 
     try {
+      const { session } = await import('./utils/supabase').then(m => m.supabase.auth.getSession()).then(res => res.data);
+      const headers = { 'Content-Type': 'application/json' };
+      if (session?.access_token) {
+        headers['Authorization'] = `Bearer ${session.access_token}`;
+      }
+      
       const apiUrl = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/shorten` : '/api/shorten';
       const response = await fetch(apiUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ url, alias: alias || undefined })
       });
 
@@ -167,9 +175,37 @@ function App() {
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <button className="bg-black text-white dark:bg-white dark:text-black rounded-full py-2 px-5 text-sm font-semibold flex items-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors">
-              Sign In <ArrowRight size={14} />
-            </button>
+            {user ? (
+              <div className="relative">
+                <button 
+                  onClick={() => setShowAuthDropdown(!showAuthDropdown)}
+                  className="flex items-center gap-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+                >
+                  <img src={user.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${user.email}`} alt="Avatar" className="w-8 h-8 rounded-full" />
+                </button>
+                {showAuthDropdown && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-xl shadow-lg z-50 overflow-hidden">
+                    <div className="px-4 py-3 border-b border-gray-200 dark:border-white/10">
+                      <p className="text-sm font-medium text-black dark:text-white truncate">{user.user_metadata?.full_name || 'User'}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{user.email}</p>
+                    </div>
+                    <button 
+                      onClick={() => {
+                        signOut();
+                        setShowAuthDropdown(false);
+                      }}
+                      className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
+                    >
+                      Sign out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <button onClick={signInWithGoogle} className="bg-black text-white dark:bg-white dark:text-black rounded-full py-2 px-5 text-sm font-semibold flex items-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors">
+                Sign In <ArrowRight size={14} />
+              </button>
+            )}
           </div>
         </div>
       </header>
