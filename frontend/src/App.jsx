@@ -33,13 +33,14 @@ function App() {
   const handleWhyClick = (e) => {
     e.preventDefault();
     if (location.pathname !== '/') {
-      navigate('/');
+      navigate('/', { replace: true });
       setTimeout(() => {
         const element = document.getElementById('why');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState(null, '', '/#why');
         }
-      }, 100);
+      }, 400);
     } else {
       const element = document.getElementById('why');
       if (element) {
