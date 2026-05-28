@@ -367,10 +367,7 @@ function App() {
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 tracking-tight text-black dark:text-white">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{feature.desc}</p>
-                <div className="flex items-center gap-1 text-[10px] font-bold text-gray-500 dark:text-gray-500 uppercase tracking-widest group-hover:text-black dark:group-hover:text-white transition-colors">
-                  Open Feature <ArrowRight size={12} />
-                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-0 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
