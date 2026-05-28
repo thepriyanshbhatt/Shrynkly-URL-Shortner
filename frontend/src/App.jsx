@@ -355,12 +355,12 @@ function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Scissors size={20} />, title: 'Instant link shortening', desc: 'Paste any URL and get a short link in one click. No account needed to try.' },
-              { icon: <QrCode size={20} />, title: 'QR code for every link', desc: 'Every short link auto-generates a downloadable QR code, instantly.' },
-              { icon: <BarChart2 size={20} />, title: 'Click tracking', desc: 'See how many times your link was clicked, updated in real time.' },
-              { icon: <LayoutDashboard size={20} />, title: 'Link dashboard', desc: 'Manage all your links in one place. Copy, share, or delete anytime.' },
-              { icon: <Smartphone size={20} />, title: 'Works on any device', desc: 'Fully responsive — shorten and manage links from your phone, tablet, or desktop.' },
-              { icon: <Ban size={20} />, title: 'Zero Ads. Ever.', desc: 'Whether you use the free plan or upgrade, there are absolutely 0 ads. No pop-ups, no tracking, no exceptions.' },
+              { icon: <Scissors size={20} />, title: 'Instant link shortening', desc: 'Paste any URL to instantly create a secure short link. No account required.' },
+              { icon: <QrCode size={20} />, title: 'QR code for every link', desc: 'Every short link automatically generates a downloadable QR code on the fly.' },
+              { icon: <BarChart2 size={20} />, title: 'Click tracking', desc: 'Monitor your link performance with real-time click tracking and analytics.' },
+              { icon: <LayoutDashboard size={20} />, title: 'Link dashboard', desc: 'Manage all your links in one central hub. Copy, share, or delete anytime.' },
+              { icon: <Smartphone size={20} />, title: 'Works on any device', desc: 'Fully responsive design lets you manage your links seamlessly on any device.' },
+              { icon: <Ban size={20} />, title: 'Zero Ads. Ever.', desc: 'Enjoy a completely ad-free experience on both our free and paid plans.' },
             ].map((feature, i) => (
               <div key={i} className="bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-[1.5rem] p-8 hover:border-gray-400 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)] group cursor-pointer shadow-sm dark:shadow-none">
                 <div className="w-12 h-12 bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center text-black dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
