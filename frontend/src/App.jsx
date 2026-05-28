@@ -37,15 +37,15 @@ function App() {
       setTimeout(() => {
         const element = document.getElementById('why');
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
           window.history.pushState(null, '', '/#why');
+          element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 400);
+      }, 500);
     } else {
       const element = document.getElementById('why');
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
         window.history.pushState(null, '', '/#why');
+        element.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };
