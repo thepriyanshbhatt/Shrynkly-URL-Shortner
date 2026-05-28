@@ -45,9 +45,10 @@ export default function Disclaimer() {
               <li>Phishing, malware distribution, or spamming.</li>
               <li>Hosting or linking to illegal content, copyright infringement, or hate speech.</li>
               <li>Links intended to deceive or harm users.</li>
+              <li>Creating spam accounts or utilizing automated bots to abuse our platform.</li>
             </ul>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
-              Shrynkly reserves the right to monitor, disable, or delete any shortened URL at our sole discretion, without prior notice, if we suspect it violates our terms or is reported as abusive.
+              Shrynkly reserves the right to monitor, disable, or delete any shortened URL, and to terminate, block, or take any other necessary action against user accounts suspected of spam or abuse at our sole discretion, without prior notice.
             </p>
           </Section>
 
