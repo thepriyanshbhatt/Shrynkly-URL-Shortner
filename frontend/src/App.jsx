@@ -202,7 +202,7 @@ function App() {
                 )}
               </div>
             ) : (
-              <button onClick={signInWithGoogle} className="bg-black text-white dark:bg-white dark:text-black rounded-full py-2 px-5 text-sm font-semibold flex items-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors">
+              <button onClick={signInWithGoogle} className="bg-black text-white dark:bg-white dark:text-black rounded-full py-2 px-5 text-sm font-semibold flex items-center gap-2 cursor-pointer border border-transparent hover:border-gray-500/50 dark:hover:border-gray-400/50 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
                 Sign In <ArrowRight size={14} />
               </button>
             )}
