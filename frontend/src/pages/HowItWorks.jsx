@@ -33,7 +33,7 @@ export default function HowItWorks() {
             <div className="w-16 h-16 rounded-3xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0 border border-blue-100 dark:border-blue-800/30">
               <span className="text-2xl font-black">1</span>
             </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)] transition-all">
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
                 <Map className="text-gray-400" size={24} /> 
                 You give us a massive map
@@ -49,7 +49,7 @@ export default function HowItWorks() {
             <div className="w-16 h-16 rounded-3xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 border border-indigo-100 dark:border-indigo-800/30">
               <span className="text-2xl font-black">2</span>
             </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)] transition-all">
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
                 <Scissors className="text-gray-400" size={24} /> 
                 We create a tiny nickname
@@ -65,7 +65,7 @@ export default function HowItWorks() {
             <div className="w-16 h-16 rounded-3xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-100 dark:border-emerald-800/30">
               <span className="text-2xl font-black">3</span>
             </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)] transition-all">
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
                 <Rocket className="text-gray-400" size={24} /> 
                 Instant teleportation
@@ -77,7 +77,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="mt-20 p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-white/5 text-center">
+        <div className="mt-20 p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-white/20 text-center hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)]">
           <h3 className="text-xl font-bold text-black dark:text-white mb-4">Why is this useful?</h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
             Short links are much easier to share on social media, fit perfectly in text messages, and look much cleaner on posters or business cards. Plus, because everyone walks through our door to get to the destination, we can count exactly how many people clicked your link!
