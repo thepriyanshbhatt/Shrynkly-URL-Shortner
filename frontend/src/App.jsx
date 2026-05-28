@@ -399,7 +399,6 @@ function App() {
               </motion.div>
             )}
           </AnimatePresence>
-        </section>
       </motion.div>
 
       {/* Stats Banner */}
