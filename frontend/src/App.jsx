@@ -7,6 +7,7 @@ import { Routes, Route, useLocation, Link as RouterLink, useNavigate } from 'rea
 import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   const location = useLocation();
@@ -458,7 +459,7 @@ function App() {
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><button onClick={() => window.dispatchEvent(new CustomEvent('openCookieSettings'))} className="hover:text-white transition-colors">Cookie Settings</button></li>
             </ul>
           </div>
           
@@ -546,6 +547,8 @@ function App() {
           </>
         )}
       </AnimatePresence>
+
+      <CookieConsent />
     </div>
   );
 }
