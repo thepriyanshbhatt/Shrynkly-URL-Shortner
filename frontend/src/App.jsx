@@ -8,6 +8,7 @@ import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Disclaimer from './pages/Disclaimer';
+import HowItWorks from './pages/HowItWorks';
 import CookieConsent from './components/CookieConsent';
 
 function App() {
@@ -430,6 +431,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
         </Routes>
       </AnimatePresence>
 
@@ -449,8 +451,8 @@ function App() {
           <div>
             <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-6">Product</h4>
             <ul className="space-y-4 text-sm text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="/#features" className="hover:text-white transition-colors">Features</a></li>
+              <li><RouterLink to="/how-it-works" className="hover:text-white transition-colors">How It Works</RouterLink></li>
               <li><RouterLink to="/pricing" className="hover:text-white transition-colors">Pricing</RouterLink></li>
             </ul>
           </div>
