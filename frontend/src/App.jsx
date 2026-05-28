@@ -33,19 +33,29 @@ function App() {
   const handleWhyClick = (e) => {
     e.preventDefault();
     if (location.pathname !== '/') {
-      navigate('/', { replace: true });
-      setTimeout(() => {
+      navigate('/');
+      let attempts = 0;
+      const tryScroll = setInterval(() => {
         const element = document.getElementById('why');
         if (element) {
-          window.history.pushState(null, '', '/#why');
-          element.scrollIntoView({ behavior: 'smooth' });
+          clearInterval(tryScroll);
+          setTimeout(() => {
+            window.scrollTo({
+              top: element.getBoundingClientRect().top + window.scrollY - 80,
+              behavior: 'smooth'
+            });
+          }, 150); // Small buffer for layout shift
         }
-      }, 500);
+        attempts++;
+        if (attempts > 20) clearInterval(tryScroll); // Stop after 1 second
+      }, 50);
     } else {
       const element = document.getElementById('why');
       if (element) {
-        window.history.pushState(null, '', '/#why');
-        element.scrollIntoView({ behavior: 'smooth' });
+        window.scrollTo({
+          top: element.getBoundingClientRect().top + window.scrollY - 80,
+          behavior: 'smooth'
+        });
       }
     }
   };
