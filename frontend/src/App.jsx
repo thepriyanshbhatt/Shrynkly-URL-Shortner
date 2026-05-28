@@ -146,8 +146,8 @@ function App() {
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
             <a href="/#why" onClick={handleWhyClick} className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
-            <RouterLink to="/pricing" className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
-            <RouterLink to="/about" className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
+            <RouterLink to="/pricing" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
+            <RouterLink to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
           </nav>
           <div className="flex items-center gap-2 sm:gap-4">
             <button 
@@ -452,8 +452,8 @@ function App() {
             <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-6">Product</h4>
             <ul className="space-y-4 text-sm text-gray-300">
               <li><a href="/#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><RouterLink to="/how-it-works" className="hover:text-white transition-colors">How It Works</RouterLink></li>
-              <li><RouterLink to="/pricing" className="hover:text-white transition-colors">Pricing</RouterLink></li>
+              <li><RouterLink to="/how-it-works" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">How It Works</RouterLink></li>
+              <li><RouterLink to="/pricing" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">Pricing</RouterLink></li>
             </ul>
           </div>
           
@@ -462,7 +462,7 @@ function App() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><RouterLink to="/disclaimer" className="hover:text-white transition-colors">Disclaimer</RouterLink></li>
+              <li><RouterLink to="/disclaimer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">Disclaimer</RouterLink></li>
               <li><button onClick={() => window.dispatchEvent(new CustomEvent('openCookieSettings'))} className="hover:text-white transition-colors">Cookie Settings</button></li>
             </ul>
           </div>
@@ -472,7 +472,7 @@ function App() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
-              <li><RouterLink to="/about" className="hover:text-white transition-colors">About</RouterLink></li>
+              <li><RouterLink to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors">About</RouterLink></li>
             </ul>
           </div>
         </div>
