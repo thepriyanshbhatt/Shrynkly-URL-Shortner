@@ -7,6 +7,7 @@ import { Routes, Route, useLocation, Link as RouterLink, useNavigate } from 'rea
 import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
+import Disclaimer from './pages/Disclaimer';
 import CookieConsent from './components/CookieConsent';
 
 function App() {
@@ -428,6 +429,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
       </AnimatePresence>
 
@@ -458,7 +460,7 @@ function App() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
+              <li><RouterLink to="/disclaimer" className="hover:text-white transition-colors">Disclaimer</RouterLink></li>
               <li><button onClick={() => window.dispatchEvent(new CustomEvent('openCookieSettings'))} className="hover:text-white transition-colors">Cookie Settings</button></li>
             </ul>
           </div>

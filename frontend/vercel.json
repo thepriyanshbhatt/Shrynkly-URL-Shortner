@@ -17,6 +17,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/disclaimer",
+      "destination": "/index.html"
+    },
+    {
       "source": "/([a-zA-Z0-9-_]+)",
       "destination": "https://worker.priyanshbhatt20.workers.dev/$1"
     },
