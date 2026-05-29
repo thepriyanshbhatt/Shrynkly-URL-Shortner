@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Scissors, Link as LinkIcon, Play, ArrowDown, Shield } from 'lucide-react';
+import { Scissors, Zap, Map, Rocket } from 'lucide-react';
 import { useEffect } from 'react';
 
 export default function HowItWorks() {
@@ -14,97 +14,74 @@ export default function HowItWorks() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.3 }}
-      className="w-full flex flex-col items-center flex-grow pt-24 pb-32 px-4 bg-gray-50 dark:bg-[#0a0a0a]"
+      className="w-full flex flex-col items-center flex-grow pt-24 pb-32 px-4"
     >
-      <div className="max-w-3xl w-full">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-[10px] sm:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] mb-4">
-            How it works
-          </p>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-black dark:text-white mb-4">
-            Short links in three steps
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 font-medium">
-            No account needed. No fuss. Just a cleaner link.
+      <div className="max-w-4xl w-full">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center p-3 bg-gray-100 dark:bg-white/10 rounded-2xl mb-6 text-black dark:text-white">
+            <Zap size={32} />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-6 text-black dark:text-white">How Shrynkly Works</h1>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Ever wonder how a giant, messy link turns into a tiny, clean one? Here's the magic behind the scenes, explained simply.
           </p>
         </div>
 
-        {/* Steps Container */}
-        <div className="relative max-w-2xl mx-auto">
-          
+        <div className="space-y-12">
           {/* Step 1 */}
-          <div className="bg-white dark:bg-[#1c1c1e] border border-gray-200 dark:border-white/5 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <div className="flex items-start gap-4 sm:gap-6">
-              <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-400 flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-black dark:text-white flex items-center gap-2 mb-2">
-                  <LinkIcon size={18} className="text-gray-500 dark:text-gray-400" /> 
-                  Paste your long URL
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Got a URL that looks like a ransom note? Paste it in. We accept anything — tracking parameters, query strings, the whole mess.
-                </p>
-              </div>
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <div className="w-16 h-16 rounded-3xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0 border border-blue-100 dark:border-blue-800/30">
+              <span className="text-2xl font-black">1</span>
             </div>
-          </div>
-
-          {/* Arrow Down */}
-          <div className="flex justify-center py-4 text-gray-400 dark:text-gray-600">
-            <ArrowDown size={18} strokeWidth={2.5} />
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+                <Map className="text-gray-400" size={24} /> 
+                You give us a massive map
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                Imagine you want to invite your friends to a hidden treasure, but the directions are a hundred pages long. That's what a long, messy web address (URL) looks like. When you paste that long link into Shrynkly, you're handing us that giant map.
+              </p>
+            </div>
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white dark:bg-[#1c1c1e] border border-gray-200 dark:border-white/5 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <div className="flex items-start gap-4 sm:gap-6">
-              <div className="w-8 h-8 rounded-full bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-400 flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-black dark:text-white flex items-center gap-2 mb-2">
-                  <Scissors size={18} className="text-gray-500 dark:text-gray-400" /> 
-                  Get a clean short link
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  We generate a compact link like <code className="bg-gray-100 dark:bg-black/30 px-1.5 py-0.5 rounded font-mono text-[13px] text-gray-800 dark:text-gray-300">shrynk.ly/abc</code> — easy to share, copy, and actually remember.
-                </p>
-              </div>
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <div className="w-16 h-16 rounded-3xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 border border-indigo-100 dark:border-indigo-800/30">
+              <span className="text-2xl font-black">2</span>
             </div>
-          </div>
-
-          {/* Arrow Down */}
-          <div className="flex justify-center py-4 text-gray-400 dark:text-gray-600">
-            <ArrowDown size={18} strokeWidth={2.5} />
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+                <Scissors className="text-gray-400" size={24} /> 
+                We create a tiny nickname
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                Instead of making your friends read a hundred pages, we put your giant map in a safe locker and put a tiny, easy-to-read sticker on the door. This sticker is your new Shrynkly short link (like `shrynk.ly/abc`).
+              </p>
+            </div>
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white dark:bg-[#1c1c1e] border border-gray-200 dark:border-white/5 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <div className="flex items-start gap-4 sm:gap-6">
-              <div className="w-8 h-8 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-400 flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-black dark:text-white flex items-center gap-2 mb-2">
-                  <Play size={18} className="text-gray-500 dark:text-gray-400" fill="currentColor" /> 
-                  Click, redirect, done
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  Anyone who clicks your short link lands at the original destination instantly — no loading screens, no middlemen, no weird detours.
-                </p>
-              </div>
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+            <div className="w-16 h-16 rounded-3xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-100 dark:border-emerald-800/30">
+              <span className="text-2xl font-black">3</span>
+            </div>
+            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+                <Rocket className="text-gray-400" size={24} /> 
+                Instant teleportation
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                When someone clicks your short link, they come to our door. We look at the sticker, instantly grab the giant map from the locker, and teleport them straight to the destination website in the blink of an eye. 
+              </p>
             </div>
           </div>
-          
-          {/* Trust Line */}
-          <div className="mt-8 bg-gray-100 dark:bg-[#1c1c1e] border border-gray-200 dark:border-white/5 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-600 dark:text-gray-400 text-center sm:text-left shadow-sm">
-            <Shield size={18} className="flex-shrink-0 text-gray-400" />
-            <p className="font-medium">
-              Your original URL is stored securely. Short links never expire unless you delete them.
-            </p>
-          </div>
+        </div>
 
+        <div className="mt-20 p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-white/20 text-center hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)]">
+          <h3 className="text-xl font-bold text-black dark:text-white mb-4">Why is this useful?</h3>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Short links are much easier to share on social media, fit perfectly in text messages, and look much cleaner on posters or business cards. Plus, because everyone walks through our door to get to the destination, we can count exactly how many people clicked your link!
+          </p>
         </div>
       </div>
     </motion.main>
