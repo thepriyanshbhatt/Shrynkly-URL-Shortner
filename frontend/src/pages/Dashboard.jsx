@@ -38,6 +38,11 @@ export default function Dashboard() {
   // QR Modal State
   const [activeQR, setActiveQR] = useState(null);
 
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Redirect if not logged in
   useEffect(() => {
     if (!authLoading && !user) {
