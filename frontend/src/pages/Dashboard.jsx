@@ -165,15 +165,15 @@ export default function Dashboard() {
           className="bg-[#111111] border border-white/10 rounded-[2rem] p-8 md:p-12 relative overflow-hidden"
         >
           {/* Subtle background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
           
-          <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+          <div className="relative z-10 max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#1c1c1e] border border-white/5 shadow-sm text-sm font-medium text-gray-300 w-fit">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
               Welcome back, {firstName}
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
               Shrynk a new <span className="text-blue-500">URL</span>
             </h1>
             <p className="text-gray-400 text-sm md:text-base">
