@@ -137,10 +137,7 @@ export default function Dashboard() {
       {/* Top Navbar */}
       <header className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto border-b border-white/5">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-          <div className="w-8 h-8 bg-white rounded-xl flex items-center justify-center">
-            <span className="font-bold text-black text-sm">S</span>
-          </div>
-          <span className="font-bold text-lg tracking-tight">Shrynkly</span>
+          {/* Logo removed as requested */}
         </div>
         
         <div className="flex items-center gap-6">
@@ -173,7 +170,7 @@ export default function Dashboard() {
               Welcome back, {firstName}
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Shrynk a new <span className="text-blue-500">URL</span>
             </h1>
             <p className="text-gray-400 text-sm md:text-base">
