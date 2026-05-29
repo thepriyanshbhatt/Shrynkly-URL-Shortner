@@ -159,7 +159,11 @@ function App() {
             </RouterLink>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-400">
-            <a href="/#why" onClick={handleWhyClick} className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
+            {user ? (
+              <RouterLink to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black dark:hover:text-white transition-colors">Home</RouterLink>
+            ) : (
+              <a href="/#why" onClick={handleWhyClick} className="hover:text-black dark:hover:text-white transition-colors">Why Shrynkly</a>
+            )}
             <RouterLink to="/pricing" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black dark:hover:text-white transition-colors">Pricing</RouterLink>
             <RouterLink to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-black dark:hover:text-white transition-colors">About</RouterLink>
           </nav>
