@@ -231,8 +231,8 @@ export default function Dashboard() {
                 <h3 className="text-xs font-semibold text-gray-500 tracking-wider uppercase mb-1">{isPro ? 'Pro Plan' : 'Free Plan'}</h3>
                 <p className="text-sm font-medium text-white">Monthly usage</p>
               </div>
-              <button onClick={() => setIsPro(!isPro)} className="text-xs flex items-center gap-1 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 px-2 py-1 rounded-md transition-colors">
-                <ArrowUpRight size={12} /> {isPro ? '[Dev] Switch Free' : 'Upgrade'}
+              <button onClick={() => navigate('/pricing')} className="text-xs flex items-center gap-1 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 px-2 py-1 rounded-md transition-colors">
+                <ArrowUpRight size={12} /> Upgrade
               </button>
             </div>
             
@@ -352,7 +352,7 @@ export default function Dashboard() {
             </ul>
 
             {!isPro && (
-              <button onClick={() => setIsPro(true)} className="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-medium transition-colors shadow-[0_0_20px_rgba(37,99,235,0.2)]">
+              <button onClick={() => navigate('/pricing')} className="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-medium transition-colors shadow-[0_0_20px_rgba(37,99,235,0.2)]">
                 Upgrade to Pro
               </button>
             )}
