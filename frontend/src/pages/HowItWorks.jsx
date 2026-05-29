@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Scissors, Zap, Map, Rocket } from 'lucide-react';
+import { Zap, Link as LinkIcon, Database, Share2, Rocket, ArrowDown } from 'lucide-react';
 import { useEffect } from 'react';
 
 export default function HowItWorks() {
@@ -27,53 +27,61 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="space-y-12">
-          {/* Step 1 */}
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="w-16 h-16 rounded-3xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0 border border-blue-100 dark:border-blue-800/30">
-              <span className="text-2xl font-black">1</span>
-            </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
-                <Map className="text-gray-400" size={24} /> 
-                You give us a massive map
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                Imagine you want to invite your friends to a hidden treasure, but the directions are a hundred pages long. That's what a long, messy web address (URL) looks like. When you paste that long link into Shrynkly, you're handing us that giant map.
-              </p>
-            </div>
+        <div className="space-y-6">
+          {/* Box 1 */}
+          <div className="bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+            <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+              <LinkIcon className="text-gray-400" size={24} /> 
+              You paste your long URL
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              Copy your URL however long or messy it is and paste it into Shrynkly. It could be a YouTube link, a product page with a dozen tracking parameters, anything. We take it all.
+            </p>
           </div>
 
-          {/* Step 2 */}
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="w-16 h-16 rounded-3xl bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 border border-indigo-100 dark:border-indigo-800/30">
-              <span className="text-2xl font-black">2</span>
-            </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
-                <Scissors className="text-gray-400" size={24} /> 
-                We create a tiny nickname
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                Instead of making your friends read a hundred pages, we put your giant map in a safe locker and put a tiny, easy-to-read sticker on the door. This sticker is your new Shrynkly short link (like `shrynk.ly/abc`).
-              </p>
-            </div>
+          <div className="flex justify-center text-gray-400 dark:text-gray-600">
+            <ArrowDown size={32} />
           </div>
 
-          {/* Step 3 */}
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div className="w-16 h-16 rounded-3xl bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-100 dark:border-emerald-800/30">
-              <span className="text-2xl font-black">3</span>
-            </div>
-            <div className="flex-1 bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
-                <Rocket className="text-gray-400" size={24} /> 
-                Instant teleportation
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                When someone clicks your short link, they come to our door. We look at the sticker, instantly grab the giant map from the locker, and teleport them straight to the destination website in the blink of an eye. 
-              </p>
-            </div>
+          {/* Box 2 */}
+          <div className="bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+            <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+              <Database className="text-gray-400" size={24} /> 
+              We store it and generate a code
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              Your original URL gets saved securely in our database. We then generate a short unique code like abc4xz and attach it to our domain. That becomes your short link: shrynk.ly/abc4xz.
+            </p>
+          </div>
+
+          <div className="flex justify-center text-gray-400 dark:text-gray-600">
+            <ArrowDown size={32} />
+          </div>
+
+          {/* Box 3 */}
+          <div className="bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+            <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+              <Share2 className="text-gray-400" size={24} /> 
+              You share the short link
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              Copy your new short link and share it anywhere. In a message, an email, a bio, wherever. It's clean, compact and works on any device.
+            </p>
+          </div>
+
+          <div className="flex justify-center text-gray-400 dark:text-gray-600">
+            <ArrowDown size={32} />
+          </div>
+
+          {/* Box 4 */}
+          <div className="bg-white dark:bg-[#111] p-8 rounded-3xl border border-gray-200 dark:border-white/20 shadow-sm hover:shadow-2xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1">
+            <h3 className="text-2xl font-bold text-black dark:text-white mb-3 flex items-center gap-3">
+              <Rocket className="text-gray-400" size={24} /> 
+              Someone clicks and we redirect them instantly
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              When anyone clicks your short link their browser hits our servers. We look up the code, find the original URL in our database and send them straight there in milliseconds. No visible loading, no detours.
+            </p>
           </div>
         </div>
 
