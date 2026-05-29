@@ -243,11 +243,8 @@ function App() {
                 className="relative w-full pt-12 md:pt-20 pb-16 overflow-hidden min-h-[90vh] flex flex-col items-center"
               >
                 <div className="grid-overlay" />
-        {/* Conditional Hero Section based on Auth State */}
-        {user ? (
-          <Navigate to="/dashboard" replace />
-        ) : (
-          <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
+        {/* Hero Section */}
+        <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
             <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-black dark:text-white max-w-5xl text-balance mx-auto">
               Long URLs were a mistake. <span className="whitespace-nowrap"><strong>Shrynkly</strong> fixes that.</span>
             </h1>
@@ -290,7 +287,6 @@ function App() {
               </form>
             </div>
           </section>
-        )}
           <AnimatePresence>
             {error && (
               <motion.p 

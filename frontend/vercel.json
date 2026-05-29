@@ -1,34 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/api/:match*",
-      "destination": "https://worker.priyanshbhatt20.workers.dev/api/:match*"
-    },
-    {
-      "source": "/faq",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/disclaimer",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/how-it-works",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/([a-zA-Z0-9-_]+)",
-      "destination": "https://worker.priyanshbhatt20.workers.dev/$1"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
