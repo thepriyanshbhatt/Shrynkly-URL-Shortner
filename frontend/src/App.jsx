@@ -3,7 +3,7 @@ import { Link, ArrowRight, Check, Copy, QrCode, Zap, History, Trash2, Scissors, 
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeSVG } from 'qrcode.react';
 import { useLinkStore } from './stores/useLinkStore';
-import { Routes, Route, useLocation, Link as RouterLink, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Link as RouterLink, useNavigate, Navigate } from 'react-router-dom';
 import FAQ from './pages/FAQ';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
@@ -241,45 +241,7 @@ function App() {
                 <div className="grid-overlay" />
         {/* Conditional Hero Section based on Auth State */}
         {user ? (
-          <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-black dark:text-white">
-              Welcome back, {user.user_metadata?.full_name?.split(' ')[0] || 'Creator'}.
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-10">
-              What are we shrinking today?
-            </p>
-
-            {/* Shortener Box */}
-            <div className="w-full max-w-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-white/10 rounded-3xl sm:rounded-full p-2 shadow-2xl shadow-black/5 dark:shadow-none relative z-20 transition-all duration-500 hover:shadow-xl focus-within:ring-4 focus-within:ring-black/5 dark:focus-within:ring-white/10 focus-within:border-black dark:focus-within:border-white">
-              <form onSubmit={handleShorten} className="flex flex-col sm:flex-row gap-2">
-                <input
-                  id="urlInput"
-                  type="text"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  placeholder="Paste your long URL here..."
-                  className="flex-1 bg-transparent border-0 py-3 px-4 sm:py-4 sm:px-6 text-base sm:text-lg focus:outline-none placeholder:text-gray-400 dark:placeholder:text-gray-600 font-medium text-black dark:text-white rounded-2xl sm:rounded-full"
-                />
-                <button 
-                  type="submit"
-                  disabled={loading}
-                  className="btn-black flex items-center justify-center min-w-[140px] rounded-2xl sm:rounded-full py-3 sm:py-4"
-                >
-                  {loading ? (
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white dark:border-black/30 dark:border-t-black rounded-full animate-spin" />
-                  ) : (
-                    <>Shorten <ArrowRight size={18} /></>
-                  )}
-                </button>
-              </form>
-            </div>
-
-            <div className="mt-12 flex items-center gap-4">
-              <button onClick={() => navigate('/dashboard')} className="text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-2 transition-colors">
-                <LayoutDashboard size={16} /> Go to Dashboard
-              </button>
-            </div>
-          </section>
+          <Navigate to="/dashboard" replace />
         ) : (
           <section className="w-full max-w-4xl mx-auto px-4 text-center z-10 flex flex-col items-center">
             <h1 className="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-black dark:text-white max-w-5xl text-balance mx-auto">
