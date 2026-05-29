@@ -134,23 +134,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-white/30">
       
-      {/* Top Navbar */}
-      <header className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto border-b border-white/5">
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-          {/* Logo removed as requested */}
-        </div>
-        
-        <div className="flex items-center gap-6">
-          <span className="text-sm text-gray-400 hidden sm:block">Welcome, {firstName}</span>
-          <button 
-            onClick={() => { signOut(); navigate('/'); }}
-            className="text-gray-400 hover:text-white transition-colors p-2"
-            title="Sign Out"
-          >
-            <LogOut size={18} />
-          </button>
-        </div>
-      </header>
+      {/* Top Navbar Removed */}
 
       {/* Main Bento Grid */}
       <main className="max-w-7xl mx-auto p-4 md:p-6 pb-20 space-y-6">
