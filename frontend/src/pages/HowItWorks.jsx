@@ -86,9 +86,9 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-20 p-8 bg-gray-50 dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-white/20 text-center hover:border-gray-400 dark:hover:border-white/40 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl dark:hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)]">
-          <h3 className="text-xl font-bold text-black dark:text-white mb-4">Why is this useful?</h3>
+          <h3 className="text-xl font-bold text-black dark:text-white mb-4">Why bother?</h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Short links are much easier to share on social media, fit perfectly in text messages, and look much cleaner on posters or business cards. Plus, because everyone walks through our door to get to the destination, we can count exactly how many people clicked your link!
+            Short links are easier to share, look cleaner everywhere and let you see exactly how many people clicked. Free links stay alive for 7 days. On Pro you choose when they expire or keep them going forever.
           </p>
         </div>
       </div>
